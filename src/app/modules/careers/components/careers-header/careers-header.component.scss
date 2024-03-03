@@ -1,0 +1,23 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/mixins";
+
+.careers-info {
+  margin-bottom: 3rem;
+  .careers-title {
+    h2 {
+      color: $orange;
+      font-family: $medium;
+      @include x-small-screen {
+        padding-bottom: 1rem;
+      }
+      @include large-screen {
+        padding-bottom: 0;
+      }
+    }
+  }
+  p {
+    color: $blue;
+    font-family: $light;
+  }
+}

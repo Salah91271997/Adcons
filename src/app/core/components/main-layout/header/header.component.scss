@@ -1,0 +1,209 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/variables";
+@import "../../../../../assets/styles/base/mixins";
+
+// header style start hear
+
+header {
+  .bold {
+    font-weight: 600;
+  }
+
+  position: relative;
+  .labtos-menu {
+    // box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+    background-color: $white;
+    @include x-small-screen {
+      display: none;
+    }
+    @include large-screen {
+      display: block;
+      // background-color: $mainColor;
+      padding: 1rem 0;
+      .links {
+        .ul {
+          @include yCenter;
+          .link {
+            padding: 0 2rem;
+            a {
+              color: $blue;
+              font-family: $regular;
+              // opacity: 0.6;
+              font-size: 1rem !important; // 16px
+              transition: all 0.3s;
+              display: block;
+              &.active-link {
+                color: $orange;
+                font-weight: 600;
+
+                svg {
+                  stroke: $orange;
+                  fill: $orange;
+                }
+              }
+              &:hover {
+                font-size: 1.03rem;
+                transform: scale(1.1);
+                color: $orange;
+                font-weight: 600;
+              }
+            }
+            .change-lang {
+              cursor: pointer;
+            }
+          }
+          .active-dropdown {
+            .active-link {
+              button {
+                color: $orange;
+                font-weight: 600;
+              }
+              .svg {
+                svg {
+                  fill: $orange;
+                  stroke: $orange;
+                }
+              }
+            }
+          }
+          .dropdown {
+            position: relative;
+            .menu {
+              display: none;
+              position: absolute;
+              top: 52px;
+              left: 0;
+              z-index: 55;
+              &.hover {
+                display: block;
+              }
+            }
+
+            padding: 0 2rem;
+            display: flex;
+            .svg {
+              margin-inline-start: 0.4rem;
+              display: flex;
+              align-items: center;
+              svg {
+                transition: 1s;
+              }
+            }
+            cursor: pointer;
+            button {
+              all: unset;
+              color: $blue;
+              font-family: $regular;
+              // opacity: 0.6;
+              font-size: 1rem !important; // 16px
+              transition: all 0.3s;
+              display: block;
+              &.active-link {
+                color: $orange;
+              }
+              &:hover {
+                font-size: 1.03rem;
+                transform: scale(1.1);
+                color: $orange;
+                font-weight: 600;
+              }
+              &::after {
+                all: unset;
+              }
+            }
+            ul {
+              border-radius: 0;
+              background-color: #dddddd;
+              li {
+                // padding: 0.5rem 0.6rem;
+                padding: 0.5rem 1.3rem;
+                &:hover {
+                  background-color: $orange;
+                  span {
+                    transition: 0.3s;
+                    transform: scale(1.1);
+                  }
+                }
+                span {
+                  cursor: pointer;
+                  background-color: transparent;
+                  color: $blue;
+                  font-family: $regular;
+                  text-transform: capitalize;
+                }
+              }
+            }
+            &:hover {
+              .svg {
+                svg {
+                  fill: $orange;
+                  stroke: $orange;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .change-lang {
+    color: $blue;
+    font-family: $regular;
+    font-size: 1rem !important; // 16px
+    transition: all 0.3s;
+    display: block;
+    cursor: pointer;
+  }
+  .mobile-menu {
+    @include x-small-screen {
+      display: block;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+      .offcanvas.offcanvas-start {
+        width: 100%;
+        background-color: $blue;
+      }
+    }
+    @include large-screen {
+      display: none;
+    }
+
+    .menu-header {
+      @include between;
+      align-items: center;
+      padding: 1rem 1.1rem;
+      .logo {
+        img {
+          max-width: 55vw;
+          @include medium-screen {
+            max-width: none;
+          }
+        }
+      }
+    }
+    .offcanvas-header {
+      justify-content: flex-end;
+    }
+
+    a {
+      font-size: 1.5rem;
+      color: $white;
+      padding: 1rem 0;
+      font-family: $regular;
+      display: block;
+    }
+    .change-lang {
+      font-size: 1.5rem !important; // 16px
+    }
+  }
+  // AR Style Start From Here
+  &.rtl {
+    a {
+      font-family: $ca-regular !important;
+    }
+  }
+}

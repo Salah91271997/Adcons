@@ -1,0 +1,51 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/mixins";
+.news-details {
+  margin-bottom: 2rem;
+  .header-section-img {
+    img {
+      width: 100vw;
+      height: 100%;
+      margin-top: -4rem;
+      position: relative;
+      z-index: 111;
+    }
+  }
+  .details-container {
+    margin-top: -5rem;
+  }
+  .sub-title {
+    margin: 2rem 0;
+  }
+  .list {
+    list-style: none;
+    @include x-small-screen {
+      margin-inline-start: 0 !important;
+    }
+    margin-inline-start: 3rem !important;
+    li {
+      color: $blue;
+      white-space: break-spaces;
+      font-family: $light;
+      padding: 0.5rem;
+      display: flex;
+      align-items: flex-start;
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  &.rtl {
+    .sub-title {
+      p {
+        font-family: $ca-light;
+      }
+    }
+    .list {
+      li {
+        font-family: $ca-light;
+      }
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "MENU": {
+    "ADCONS": "Adcons",
+    "ABOUT_US": "About us",
+    "SERVICES": "Services",
+    "SERVICESDETAILS": "Services-Details",
+    "CAREER": "Careers",
+    "NEWS": "News",
+    "404": "Page Not Found",
+    "500": "Server Error",
+    "HOME": "Home",
+    "CONTACT_US": "Contact us",
+    "TERMS_CONDITIONS": "Terms & Conditions",
+    "PRIVACY_POLICY": "Privacy Policy",
+    "FAQ": "FAQ",
+    "PROJECTS": "Projects",
+    "COMPANY": "Company",
+    "NEWSLATTER": "Newsletter"
+  },
+  "ERROR_PAGES": {
+    "HOME": "Home",
+    "BACK": "Back to Home",
+    "ACCESS_DENIED": "Access Denied",
+    "NOT_FOUND": "Page Not Found",
+    "NOT_FOUND_MAIN_TITLE": "Looks like you're lost",
+    "NOT_FOUND_TITLE": "This Page you're looking for is not available now.",
+    "WE_HELP": "The page that you are trying to access does not exist.",
+    "SERVER_ERROR": "Internal Server Error",
+    "WRONG_SERVER": "Please try again later."
+  },
+  "VALIDATION_MESSAGES": {
+    "EMAIL_REQUIRED": "Email Required",
+    "EMAIL_INVALID": "Please Enter Valid Email Address",
+    "INVALID_NUMBER": "Please Enter Valid Number",
+    "INVALID_NUMBER_AND_YEAR": "Please Enter Valid Number and Valid Year",
+    "INVALID_YEAR": "Please Enter Valid Year",
+    "COUNTRY_REQUIRED": "Country Required",
+    "INVALID_ENGLISH": "Allowed English Characters Only",
+    "INVALID_ARABIC": "Allowed Arabic Characters Only",
+    "INVALID_EN_ALPHA_NUM": "Allowed Only Numbers And English Characters",
+    "INVALID_AR_ALPHA_NUM": "Allowed Only Numbers And Arabic Characters",
+    "INVALID_PHONE_NUMBER": "Please Enter Valid Phone Number",
+    "FIRST_NAME_REQUIRED": "First Name Required",
+    "MID_NAME_REQUIRED": "Middle Name Required",
+    "LAST_NAME_REQUIRED": "Last Name Required",
+    "PHONE_NUMBER_REQUIRED": "Phone Number Required",
+    "INVALID_AR_EN": "Allowed English & Arabic Characters Only",
+    "CV": "CV Required",
+    "MESSAGE": "Message Required",
+    "SOCIAL_LINK": "Social Link Is Required",
+    "INVALID_URL": "Invalid URL",
+    "EMPLOYER": {
+      "DESIGNATION_REQUIRED": "Designation Is Required",
+      "COMPANY_REQUIRED": "Company Name Is Required",
+      "START_DATE_REQUIRED": "Start date Is Required",
+      "END_DATE_REQUIRED": "End date Is Required",
+      "SUMMARY_REQUIRED": "Summary Is Required",
+      "REMOVE_EMPLOYER": "Remove this Employer"
+    },
+    "EDUCATION": {
+      "UNIVERSITY_REQUIRED": "University Is Required",
+      "GRADUATION_YEAR_REQUIRED": "Graduation Year Is Required ",
+      "EDUCATION_DEGREE_REQUIRED": "Education Degree Is Required ",
+      "MAJOR_REQUIRED": "Major Is Required ",
+      "POST_REQUIRED": "Post Graduate Is Required "
+    },
+    "END_FO_LENGTH": "You can't add more than 5"
+  },
+  "LABELS": {
+    "NAME": "Name",
+    "E_MAIL": "E-mail",
+    "PHONE": "Phone",
+    "MOBILE": "Mobile",
+    "COUNRTY": "Country",
+    "ATTACH_FILES": "Attach files",
+    "SUBJECT": "Subject",
+    "MESSAGE": "Message",
+    "SOCIAL": "Social Media and web links",
+    "FIRST_NAME": "First Name",
+    "M_NAME": "Middle Name",
+    "LAST_NAME": "Last Name",
+    "EMPLOYER": {
+      "DESIGNATION": "Designation",
+      "BUSINESS_NAME": "Company / Business Name",
+      "START": "Start date",
+      "END": "End date",
+      "CURRENTLY": "I Currently work there",
+      "SUMMERY": "Summary"
+    },
+    "EDUCATION": {
+      "UNIVERSITY": "University",
+      "GRADUATION": "Graduation Year",
+      "DEGREE": "Education Degree",
+      "MAJOR": "Major",
+      "POST_GRADUATE": "Post Graduate"
+    },
+    "PLACEHOLDER": {
+      "APPLICATION": "insert your application"
+    }
+  },
+  "FOOTER": {
+    "NEWSLATTER": "Sign up for our latest news, and insights from ",
+    "SUBSCRIBE": "Subscribe",
+    "NEWSLATTER_PLACEHOLDER": "Your E-mail Address",
+    "DESCRIPTION": "The company applies higher international safety, industrial and occupational standards are applied to its employees."
+  },
+  "CAREERS": {
+    "APPLY": "Apply",
+    "APPLY_NOW": "Apply Now",
+    "LOCATION": "Location",
+    "SUBMIT_YOUR_APP": "Submit your Application",
+    "TYPE": "Work type",
+    "DAYS": "Work days",
+    "SUBMIT": "Submit",
+    "JOB_DESCRIPTION": "Job Description",
+    "JOB_REQURIMENTS": "Job Requirements",
+    "FILL_YOU_FORM": "Fill your form now",
+    "PROVIDE": "Provide us with links to see some of your work (Git / Dribble / Behance /Medium)",
+    "EMPLOYER": {
+      "TITLE": "Employer",
+      "REMOVE": "Remove this Employer",
+      "ADD": "Add Employer"
+    },
+    "EDUCATION": {
+      "TITLE": "Education",
+      "ADD": "Add Education"
+    },
+    "SUBMIT_APP": "Submit Application",
+    "LOAD_MORE": "Load More",
+    "HANDEL_FORM_ERRORS": {
+      "EMAIL_EXISTS": "career with this email already exists",
+      "FORMAT": "allowed format is :  'pdf', 'docx",
+      "ZIZE": "File too large. Size should not exceed 10 MiB"
+    }
+  },
+  "Home": {
+    "Read": "Read More",
+    "AllP": "All Projects",
+    "Veiw": "Veiw Details"
+  },
+  "Projects": {
+    "All": "All ",
+    "Filter": "Filter by",
+    "veiw": "Veiw Details",
+    "Details": "Project Details",
+    "Location": "Location",
+    "AllP": "All Projects",
+    "Sector": "Sector",
+    "Area": "Area",
+    "Year": "Year",
+    "No": "No Projects added untill now",
+    "Explore": "Explore More Projects",
+    "read": "Read More",
+    "news": "News Details"
+  }
+}

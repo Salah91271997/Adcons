@@ -1,0 +1,29 @@
+<div class="project-details mt-5" setRtl *ngIf="item">
+  <div class="adcons-container">
+    <div class="row">
+      <div class="col-lg-1 order-last order-lg-first">
+        <swiper
+          (swiper)="thumbsSwiper = $event"
+          class="mySwiper"
+          [config]="options"
+        >
+          <ng-template swiperSlide *ngFor="let img of item?.product_images"
+            ><img [src]="imgUrl + img?.image" alt="" class="img-swiper"
+          /></ng-template>
+        </swiper>
+      </div>
+      <div class="col-lg-11">
+        <swiper
+          [spaceBetween]="10"
+          [navigation]="true"
+          [thumbs]="{ swiper: thumbsSwiper }"
+          class="mySwiper2"
+        >
+          <ng-template swiperSlide *ngFor="let img of item?.product_images"
+            ><img [src]="imgUrl + img?.image" alt="" class="img-swiper"
+          /></ng-template>
+        </swiper>
+      </div>
+    </div>
+  </div>
+</div>

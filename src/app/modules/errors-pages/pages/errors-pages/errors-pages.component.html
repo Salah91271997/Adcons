@@ -1,0 +1,24 @@
+<div class="errors" setRtl>
+  <div>
+    <h1>{{ errorNumber }}</h1>
+    <div>
+      <iframe
+        *ngIf="errorIframe"
+        [src]="sanitizeImageUrl(errorIframe)"
+      ></iframe>
+      <h4>
+        {{ "ERROR_PAGES." + errorTitle | translate }}
+      </h4>
+    </div>
+
+    <span>{{ "ERROR_PAGES." + errorMessage | translate }}</span>
+    <div class="btn-container">
+      <!-- <button class="gray-btn" type="button" (click)="goBack()">
+        {{ "ERROR_PAGES.BACK" | translate }}
+      </button> -->
+      <button class="blue-btn" type="button" (click)="goHome()">
+        {{ "ERROR_PAGES.BACK" | translate }}
+      </button>
+    </div>
+  </div>
+</div>

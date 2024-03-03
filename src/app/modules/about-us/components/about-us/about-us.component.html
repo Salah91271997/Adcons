@@ -1,0 +1,29 @@
+<div class="about-us" setRtl>
+  <div class="adcons-wrapper">
+    <div class="row">
+      <div class="col-md-6 order-last order-md-first">
+        <div class="about-us-details adcons-container">
+          <div class="details-container">
+            <h1>
+              {{ aboutUs?.service_title }}
+              <span class="orange">{{ aboutUs?.service_subtitle }}</span>
+            </h1>
+
+            <h3>{{ aboutUs?.service_quote }}</h3>
+            <div class="btn-container" routerLink="/services">
+              <button class="white-btn">
+                {{ aboutUs?.service_btn }}
+                <div class="on-hover"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="about-us-image">
+          <img [src]="imgUrl + aboutUs?.service_img" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

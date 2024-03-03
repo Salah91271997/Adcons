@@ -1,0 +1,31 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/mixins";
+.value {
+  padding: 3.5rem 0;
+  .info {
+    margin-inline-start: 0;
+    h2 {
+      color: $orange;
+      margin-bottom: 1rem;
+      font-family: $medium;
+    }
+    @include large-screen {
+      margin-inline-start: 2%;
+    }
+  }
+
+  // Ar Style Start From Here
+  &.rtl {
+    .info {
+      h2 {
+        font-family: $ca-medium;
+      }
+      .sub-title {
+        p {
+          font-family: $ca-regular;
+        }
+      }
+    }
+  }
+}

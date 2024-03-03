@@ -1,0 +1,89 @@
+@import "../../../../../../assets/styles/base/variables";
+@import "../../../../../../assets/styles/base/colors";
+@import "../../../../../../assets/styles/base/mixins";
+@import "../../../../../../assets/styles/base/typography";
+@import "../../../../../../assets/styles/base/mixins";
+.projects {
+  .row {
+    margin-bottom: 3rem;
+    @include medium-screen {
+      margin-bottom: 10rem;
+    }
+  }
+  padding: 3rem 0;
+  .project-details {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    @include medium-screen {
+      margin-bottom: 0rem;
+      margin-top: 0rem;
+    }
+
+    .header {
+      p,
+      h5 {
+        color: $orange;
+      }
+      p {
+        font-family: $light;
+        margin-bottom: 0.5rem;
+      }
+      h5 {
+        font-family: $semiBold;
+        margin-bottom: 2rem;
+      }
+    }
+    .body {
+      span {
+        color: $blue;
+        display: block;
+        font-family: $light;
+      }
+    }
+    &.right {
+      margin-inline-end: 1rem;
+    }
+    &.left {
+      margin-inline-start: 1rem;
+    }
+  }
+  .project-image.img2 {
+    display: flex;
+    justify-content: flex-start;
+
+    img {
+      width: 47%;
+      max-width: 47%;
+      max-height: 22rem;
+    }
+    .image-1 {
+      margin-inline-start: 1rem;
+
+      @include medium-screen {
+        transform: translateY(6rem);
+      }
+    }
+  }
+  .project-image.img1 {
+    img {
+      max-height: 25rem;
+    }
+    .image-0 {
+      width: 100%;
+    }
+  }
+  // arabic style
+  &.rtl {
+    h5 {
+      font-family: $ca-S-bold;
+    }
+    p,
+    span {
+      font-family: $ca-light;
+    }
+  }
+}

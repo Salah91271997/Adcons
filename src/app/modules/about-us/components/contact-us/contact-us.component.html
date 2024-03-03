@@ -1,0 +1,72 @@
+<div class="contact-us" setRtl>
+  <div class="adcons-container">
+    <div class="row">
+      <div class="col-lg-6 d-flex align-items-center">
+        <div class="details">
+          <h2 class="blue">
+            {{ contactUs?.contact_us_title }}
+          </h2>
+          <h2 class="mb-4 orange">
+            {{ contactUs?.contact_us_subtitle }}
+          </h2>
+          <img [src]="imgUrl + contactUs?.contact_us_svg" alt="" />
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-content">
+              <div>
+                <input-text
+                  [formControlName]="'name'"
+                  [label]="'LABELS.NAME'"
+                  [formControl]="formControlData('name')"
+                  [errorMessages]="errorMessages"
+                  [transparent]="true"
+                >
+                </input-text>
+              </div>
+
+              <div class="">
+                <input-text
+                  [formControlName]="'email'"
+                  [label]="'LABELS.E_MAIL'"
+                  [formControl]="formControlData('email')"
+                  [errorMessages]="errorMessages"
+                  [transparent]="true"
+                >
+                </input-text>
+              </div>
+
+              <div class="">
+                <input-text
+                  [formControlName]="'message'"
+                  [label]="'LABELS.MESSAGE'"
+                  [formControl]="formControlData('message')"
+                  [errorMessages]="errorMessages"
+                  [transparent]="true"
+                  [type]="'textarea'"
+                >
+                </input-text>
+              </div>
+
+              <div class="">
+                <div class="btn-container">
+                  <form-spinner *ngIf="loadding"></form-spinner>
+                  <button *ngIf="!loadding" class="blue-btn">
+                    {{ contactUs?.contact_us_btn }}
+                  </button>
+                </div>
+                <div class="message" *ngIf="messageState">
+                  <p>
+                    {{ messageState }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

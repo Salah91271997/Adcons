@@ -1,0 +1,29 @@
+<ng-container *ngIf="aboutUsData$ | async as aboutUsData">
+  <about-us-hero
+    [social]="aboutUsData.social"
+    [aboutUs]="aboutUsData.about_us"
+  ></about-us-hero>
+  <mission [mission]="aboutUsData.about_us"></mission>
+  <history
+    [title]="aboutUsData?.about_us?.history_title"
+    [history]="aboutUsData.about_us.history"
+  ></history>
+  <latest-project [project]="aboutUsData.about_us"></latest-project>
+  <!-- <location [location]="aboutUsData.about_us.location"></location> -->
+  <quote [quote]="aboutUsData.about_us.quote"></quote>
+  <leadership
+    [leadership]="aboutUsData.about_us.leadership"
+    [leadershipTitle]="aboutUsData.about_us.leadership_title"
+  ></leadership>
+  <lets-build
+    [build]="{
+      title1: aboutUsData.about_us.contact_us_title,
+      title2: aboutUsData.about_us.contact_us_subtitle,
+      description: aboutUsData.about_us.contact_us_description,
+      button: aboutUsData.about_us.contact_us_btn
+    }"
+  ></lets-build>
+
+  <!-- <contact-us [contactUs]="aboutUsData.about_us"></contact-us> -->
+</ng-container>
+<!-- <navigate [linksName]="['Home', 'Career', 'Career details']" [pathes]="['', '/']"></navigate> -->

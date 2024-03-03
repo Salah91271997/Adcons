@@ -1,0 +1,16 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/mixins";
+.contact-us {
+  margin: 3rem 0;
+  .gap {
+    gap: 4rem;
+  }
+  .contact-info {
+    height: 100%;
+    width: 100%;
+    background-color: $grey;
+    @include large-screen {
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,143 @@
+<div class="projects" setRtl>
+  <div
+    class="adcons-container"
+    *ngIf="currentPageNumber$ | async as currentPageNumber"
+  >
+    <div class="row">
+      <div class="col-12">
+        <navigate
+          [linksName]="['MENU.HOME', 'MENU.PROJECTS']"
+          [pathes]="['/', '/projects']"
+        ></navigate>
+      </div>
+    </div>
+    <div class="row" *ngIf="page$ | async as page">
+      <div class="col-md-4 col-12">
+        <div class="title mt-3">
+          <h2>{{ page.title }}</h2>
+        </div>
+      </div>
+      <div class="col-md-8 col-12">
+        <div class="sub-title mt-3">
+          <p>{{ page.description }}</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row mt-5 align-items-center"
+      *ngIf="filters$ | async as filters"
+    >
+      <div class="col-lg-10">
+        <div class="overFlow">
+          <ul class="d-flex align-items-center">
+            <li class="px-2">
+              <a (click)="changeFilterId('all', currentPageNumber)">
+                <p
+                  class="cursor"
+                  [ngClass]="{
+                    blue: filterId === 'all',
+                    blueLight: filterId !== 'all'
+                  }"
+                >
+                  {{ "Projects.All" | translate }}
+                </p>
+              </a>
+            </li>
+
+            <li
+              *ngFor="let filter of filters[curentSelect]"
+              class="px-2 nowrap cursor"
+            >
+              <a (click)="changeFilterId(filter.id, currentPageNumber)">
+                <p
+                  class=""
+                  [ngClass]="{
+                    blue: filterId === filter.id,
+                    blueLight: filterId !== filter.id
+                  }"
+                >
+                  {{ filter.name }}
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="d-flex ">
+          <div class="btn-group">
+            <button
+              class="grey-btn blue d-flex align-items-center w-100 text-center justify-content-center"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="../../../../../assets/imgs/Icon material-filter-list.svg"
+                class=""
+              />
+              <p class="regular px-3 nowrap">
+                {{ "Projects.Filter" | translate }}
+              </p>
+            </button>
+            <ul class="dropdown-menu p-3 w-100">
+              <li *ngFor="let mainType of mapKeys(types)" class="cursor">
+                <a (click)="changeFilters(mainType)">
+                  <p class="blueLight cursor">
+                    {{ !isArabic ? types[mainType].ar : types[mainType].en }}
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="projects$ | async as projects" class="mt-5 mt-lg-0">
+        <div class="col-12 mt-5" *ngFor="let project of projects">
+          <div class="">
+            <app-project-item [item]="project"></app-project-item>
+          </div>
+        </div>
+        <div class="" *ngIf="!projects.length">
+          <p class="blue text-center my-4">
+            {{ "Projects.No" | translate }}
+          </p>
+        </div>
+      </div>
+      <nav
+        aria-label="Page navigation example"
+        class="page my-5"
+        *ngIf="projectPageNumber$ | async as pages"
+      >
+        <ul
+          class="pagination d-flex justify-content-center"
+          *ngIf="pages.length"
+        >
+          <li class="page-item">
+            <a
+              (click)="paginate(currentPageNumber - 1, pages)"
+              class="page-link blue cursor"
+              [ngClass]="{ blueLight: currentPageNumber <= 1 }"
+            >
+            </a>
+          </li>
+          <li class="page-item" *ngFor="let page of pages">
+            <a
+              (click)="paginate(page, pages)"
+              class="page-link orange cursor"
+              [ngClass]="{ active: page === currentPageNumber }"
+              >{{ page }}</a
+            >
+          </li>
+          <li class="page-item">
+            <a
+              (click)="paginate(currentPageNumber + 1, pages)"
+              class="page-link blue cursor"
+              [ngClass]="{ blueLight: currentPageNumber >= pages.length }"
+            >
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

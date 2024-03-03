@@ -1,0 +1,298 @@
+@import "~swiper/css";
+@import "~swiper/css/pagination";
+@import "~swiper/css/navigation";
+@import "~swiper/css/effect-fade";
+@import "../../../../../assets/styles/base/variables";
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/mixins";
+@import "../../../../../assets/styles/base/typography";
+
+.history {
+  position: relative;
+  padding: 3rem 0;
+  background-color: $blue;
+  // swiper style
+  .mySwiper {
+    z-index: 55 !important;
+    padding-bottom: 2.4rem !important;
+    @include normal-screen {
+      padding-bottom: 0rem !important;
+    }
+  }
+  .swiper {
+    width: 100%;
+
+    .swiper-slide {
+      display: flex;
+    }
+
+    .swiper-pagination {
+      max-width: 90%;
+      bottom: 0;
+      @include normal-screen {
+        max-width: 35%;
+        left: 10%;
+        bottom: 10px;
+      }
+      left: 19%;
+      display: flex;
+      justify-content: space-between;
+
+      .swiper-pagination-bullet {
+        position: relative;
+        flex: 1;
+        background-color: transparent;
+        border-radius: 0;
+        top: 50%;
+        padding: 0.5rem 0;
+        transition: 0.8s;
+        overflow: hidden;
+        z-index: 55;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: white;
+          left: 18px;
+          top: 50%;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          background-color: white;
+          left: 0;
+          top: 0%;
+        }
+        &:last-child::after {
+          content: "";
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      z-index: 5;
+      top: 101.5%;
+      @include medium-screen {
+        top: 100.5%;
+      }
+      @include normal-screen {
+        top: 99%;
+      }
+      width: 2rem;
+      height: 2rem;
+      background-size: contain;
+      background-repeat: no-repeat !important;
+      &::after {
+        content: "" !important;
+      }
+    }
+    .swiper-button-prev {
+      left: 0%;
+      @include normal-screen {
+        left: 1%;
+      }
+
+      background-image: url("../../../../../assets/imgs/Icon\ feather-arrow-right.svg");
+    }
+    .swiper-button-next {
+      right: 82%;
+      @include medium-screen {
+        right: 90%;
+      }
+      @include normal-screen {
+        right: 92%;
+      }
+      background-image: url("../../../../../assets/imgs/Icon\ feather-arrow-left.svg");
+    }
+  }
+
+  //main style
+
+  .pattern-section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+  }
+  .hisotory-details {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    h2 {
+      color: $orange;
+      font-family: $medium;
+      margin-bottom: 2rem;
+    }
+    h5 {
+      font-family: $semiBold;
+      margin-bottom: 1rem;
+      color: $white100;
+    }
+    h6 {
+      font-family: $light;
+      color: $white100;
+      @include medium-screen {
+        max-width: 80%;
+      }
+    }
+    span {
+      margin-top: 2rem;
+
+      @include x-small-screen {
+        font-size: 6rem;
+      }
+      @include medium-screen {
+        font-size: 8rem;
+      }
+      @include large-screen {
+        font-size: 10rem;
+      }
+      font-family: $bold;
+      background: rgb(242, 242, 242);
+      background: linear-gradient(
+        270deg,
+        rgba(103, 128, 165, 1) 0%,
+        rgba(242, 242, 242, 0.9192051820728291) 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  // animation classes
+
+  // disapear-left
+  @keyframes fadeleft {
+    0% {
+      opacity: 0%;
+      transform: translate(100px);
+    }
+
+    100% {
+      opacity: 100%;
+      transform: translate(0px);
+    }
+  }
+  // disapear-left
+  @keyframes fadeleft-img {
+    0% {
+      transform: translate(800px);
+    }
+
+    100% {
+      transform: translate(0px);
+    }
+  }
+  // disapear-right
+  @keyframes faderight {
+    0% {
+      opacity: 0%;
+      transform: translate(-100px);
+    }
+
+    100% {
+      opacity: 100%;
+      transform: translate(0px);
+    }
+  }
+  // disapear-left
+  @keyframes faderight-img {
+    0% {
+      transform: translate(-800px);
+    }
+
+    100% {
+      transform: translate(0px);
+    }
+  }
+  .fadeleft {
+    h5,
+    h6,
+    span {
+      animation: fadeleft;
+      animation-duration: 0.8s;
+    }
+    img {
+      animation: fadeleft-img;
+      animation-duration: 0.8s;
+    }
+  }
+
+  .faderight {
+    h5,
+    h6,
+    span {
+      animation: faderight;
+      animation-duration: 0.8s;
+    }
+    img {
+      animation: faderight-img;
+      animation-duration: 0.8s;
+    }
+  }
+
+  // arabic style
+
+  &.rtl {
+    h2 {
+      font-family: $ca-medium;
+    }
+    h5 {
+      font-family: $ca-S-bold;
+    }
+    h6 {
+      font-family: $ca-light;
+    }
+    span {
+      font-family: $ca-bold;
+    }
+    //swiper style
+    .swiper-button-prev {
+      right: 0%;
+      background-image: url("../../../../../assets/imgs/Icon\ feather-arrow-left.svg");
+    }
+
+    .swiper-button-next {
+      right: 10%;
+      @include medium-screen {
+        right: 5%;
+      }
+      background-image: url("../../../../../assets/imgs/Icon\ feather-arrow-right.svg");
+    }
+    .swiper-pagination {
+      left: auto;
+      right: 10%;
+
+      .swiper-pagination-bullet {
+        &:first-child::after {
+          content: "";
+          width: 0;
+          height: 0;
+        }
+        &:last-child::after {
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: white;
+          left: 18px;
+          top: 50%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+
+.career-form {
+  margin-top: 2rem;
+  .form-title {
+    h6 {
+      color: $orange;
+      font-family: $semiBold;
+    }
+    &__mar {
+      margin-bottom: 2rem;
+    }
+    &__1 {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .file {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 64px;
+    opacity: 0;
+  }
+  .plus {
+    min-height: 3rem;
+    background-color: #d0d5dd;
+    color: $blue;
+    padding: 0.65rem 1rem 0.55rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .checkbox-container {
+    p {
+      color: $orange;
+      font-family: $regular;
+    }
+    .form-check-input {
+      background-color: #dbe0e8;
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-inline-end: 0.5rem;
+      margin-top: 0;
+    }
+    .form-check-input:checked[type="checkbox"] {
+      background-image: url(../../../../../assets/imgs/checkbox.svg);
+    }
+  }
+
+  .employer {
+    margin-top: 5rem;
+  }
+  .employer-body,
+  .education-body {
+    background-color: $white;
+    padding: 2rem;
+
+    .btn-container {
+      .gray-btn {
+        min-width: 19rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  .btn-container {
+    &__app {
+      margin: 2rem 0;
+      .blue-btn {
+        position: relative;
+        transition: all 0.5s;
+        z-index: 1121;
+        overflow: hidden;
+        .on-hover {
+          position: absolute;
+          background-color: $orange;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          transform: translateX(-100%);
+          opacity: 0;
+          transition: all 0.5s;
+        }
+        &:hover {
+          color: $white;
+          .on-hover {
+            transform: translateX(0);
+            opacity: 1;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+  .notification-message-container {
+    .notification-message {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+      transition: all ease-in-out 1s;
+
+      p {
+        background: #000;
+        color: #fff;
+        padding: 0.5rem 2rem;
+        border-radius: 20px;
+      }
+    }
+  }
+  .education {
+    margin-top: 3rem;
+    .education-form {
+      display: none;
+    }
+  }
+  .error-message {
+    .message {
+      color: $error;
+      font-family: $regular;
+      display: block;
+      margin-top: 0.5rem;
+    }
+  }
+  &.rtl {
+    .form-title {
+      h6 {
+        font-family: $ca-S-bold;
+      }
+    }
+    .checkbox-container {
+      p {
+        font-family: $ca-regular;
+      }
+    }
+    .error-message {
+      .message {
+        font-family: $ca-regular;
+      }
+    }
+    .file {
+      right: auto;
+      left: 0;
+    }
+  }
+}

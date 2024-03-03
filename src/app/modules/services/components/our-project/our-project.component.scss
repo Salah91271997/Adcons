@@ -1,0 +1,49 @@
+@import "../../../../../assets/styles/base/variables";
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/mixins";
+
+.our-project {
+  // padding: 3rem 0;
+  position: relative;
+  @include background-image;
+  h2 {
+    font-family: $medium;
+    color: $white100;
+    margin-bottom: 0.4rem;
+  }
+  .details-container {
+    height: 47vh;
+    @include yCenter;
+    .details {
+      position: relative;
+      z-index: 55;
+      @include x-small-screen {
+        width: 100%;
+        text-align: center;
+      }
+      @include medium-screen {
+        width: auto;
+        text-align: unset;
+      }
+      .btn-container {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+  }
+  // arabic style
+  &.rtl {
+    h2 {
+      font-family: $ca-medium;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<div class="adcons-container" setRtl>
+  <div class="build">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div class="details">
+          <div class="details-container">
+            <div class="titile">
+              <h2 class="main-title">
+                {{ build?.title1 }}
+              </h2>
+              <h2 class="sub-title">
+                {{ build?.title2 }}
+              </h2>
+            </div>
+            <div class="description">
+              <span>
+                {{ build?.description }}
+              </span>
+            </div>
+            <div class="btn-container">
+              <button class="blue-btn" routerLink="/contact-us">
+                {{ build?.button }}
+                <div class="on-hover"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="patt">
+          <pattern
+            [opacityHover]="0.8"
+            [opacity]="0.4"
+            [rowNumber]="3"
+            [patternNumber]="20"
+          ></pattern>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

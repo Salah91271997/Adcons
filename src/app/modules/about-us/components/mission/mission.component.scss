@@ -1,0 +1,30 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/mixins";
+@import "../../../../../assets/styles/base/typography";
+.mission {
+  padding: 5rem 0;
+  background-color: $grey;
+  .mission-details,
+  .vision-details {
+    h2 {
+      color: $orange;
+      font-family: $medium;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-family: $light;
+      color: $blue;
+      max-width: 100%;
+      @include large-screen {
+        max-width: 80%;
+      }
+    }
+  }
+  // arabic styles
+  &.rtl {
+    h2,
+    p {
+      font-family: $ca-regular;
+    }
+  }
+}

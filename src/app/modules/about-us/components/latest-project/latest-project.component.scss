@@ -1,0 +1,109 @@
+@import "../../../../../assets/styles/base/variables";
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/mixins";
+@import "../../../../../assets/styles/base/typography";
+
+.latest-project {
+  padding-top: 5rem;
+  .latest-details {
+    h5 {
+      font-family: $medium;
+      color: $orange;
+      margin-bottom: 1rem;
+
+      @include medium-screen {
+        max-width: 62%;
+      }
+    }
+    p {
+      font-family: $light;
+      color: $blue;
+
+      @include medium-screen {
+        max-width: 67%;
+      }
+    }
+  }
+  .latest-boxs {
+    display: block;
+    @include normal-screen {
+      display: flex;
+    }
+    justify-content: space-between;
+    .box {
+      width: 100%;
+      margin: 1rem 0;
+      @include normal-screen {
+        width: 13rem;
+        margin: 0 1rem;
+      }
+      text-align: center;
+      background-color: $grey;
+      padding: 1rem;
+      max-height: 10rem;
+      span {
+        display: block;
+        color: $orange;
+        font-family: $bold;
+        font-size: 2.1875rem;
+      }
+      small {
+        font-family: $light;
+        color: $blue;
+        display: block;
+
+        margin: auto;
+      }
+    }
+  }
+  .project {
+    margin-top: 7rem;
+    .project-image {
+      img {
+        height: 30rem;
+        width: 100%;
+      }
+    }
+    .prject-details {
+      .sub-details {
+        margin-top: -1rem;
+      }
+      .title {
+        color: $orange;
+        max-width: 80%;
+        font-family: $semiBold;
+        margin-bottom: 2rem;
+      }
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      p {
+        max-width: 100%;
+        @include large-screen {
+          max-width: 80%;
+        }
+        color: $blue;
+        font-family: $light;
+        white-space: pre-line;
+      }
+      .btn-container {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+  // arabic style
+  &.rtl {
+    h5 {
+      font-family: $ca-medium;
+    }
+    p,
+    small {
+      font-family: $ca-light;
+    }
+
+    span {
+      font-family: $ca-bold;
+    }
+  }
+}

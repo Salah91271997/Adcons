@@ -1,0 +1,32 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+
+.resposibilities {
+  margin: 2rem 0;
+  h6 {
+    color: $orange;
+    font-family: $semiBold;
+    margin-bottom: 1rem;
+  }
+  .resposibilities-list {
+    // margin-left: 1rem !important;
+    p {
+      font-size: 1rem;
+      font-family: $light;
+      color: $blue;
+      padding-bottom: 0.8rem;
+      white-space: break-spaces;
+      line-height: 2;
+    }
+  }
+  &.rtl {
+    h6 {
+      font-family: $ca-S-bold
+    }
+    .resposibilities-list {
+      p {
+        font-family: $ca-light;
+      }
+    }
+  }
+}

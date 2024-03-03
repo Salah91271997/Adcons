@@ -1,0 +1,15 @@
+<div class="news-item card" setRtl>
+  <div class="news-hover card-body">
+    <div class="img-box">
+      <img [src]="item.image" alt="" class="img-news" />
+    </div>
+    <h6 class="my-3">{{ item.title }}</h6>
+    <span class="description">
+      {{ item.short_description | subText }}
+    </span>
+    <a routerLink="details/{{ item.id }}">
+      <img src="../../../../../assets/imgs/Path 509.svg" alt="" />
+      <span class="px-2">{{ "Home.Read" | translate }}</span>
+    </a>
+  </div>
+</div>

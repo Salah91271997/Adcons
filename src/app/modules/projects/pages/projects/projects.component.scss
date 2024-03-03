@@ -1,0 +1,80 @@
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/mixins";
+.projects {
+  .nowrap {
+    white-space: nowrap;
+  }
+  .overFlow {
+    overflow-x: scroll;
+    width: 90%;
+  }
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .title {
+    h2 {
+      font-family: $medium;
+    }
+  }
+  .orange {
+    color: $orange;
+  }
+  .cursor {
+    cursor: pointer;
+  }
+  .page-link {
+    background-color: $white100;
+  }
+  .active {
+    background-color: $grey;
+    border: 0;
+  }
+  .grey-btn {
+    background-color: rgba($blue, 15%);
+    box-shadow: none;
+  }
+  .btn-group {
+    width: 100%;
+    margin-top: 2rem;
+    @include large-screen {
+      margin-top: 0;
+    }
+  }
+  .dropdown-menu {
+    width: 14rem;
+    // background-color: rgba($blue, 15%);
+    background-color: rgb(208 213 221);
+    border-radius: 0;
+    border: 0;
+    outline: 0;
+  }
+  .blue {
+    color: $blue;
+  }
+  .blueLight {
+    // color: rgba($blue, 50%);
+    color: $blue;
+    font-family: $regular;
+    padding: 0.3rem 0;
+    opacity: 0.5;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .regular {
+    font-family: $regular;
+  }
+  &.rtl {
+    .title {
+      h2 {
+        font-family: $ca-medium;
+      }
+    }
+    .regular {
+      font-family: $ca-regular;
+    }
+  }
+}

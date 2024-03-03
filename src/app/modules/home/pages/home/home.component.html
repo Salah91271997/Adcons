@@ -1,0 +1,8 @@
+<div *ngIf="home$ | async as homeContent">
+  <app-home-section [item]="homeContent"></app-home-section>
+  <app-adcons-section [item]="homeContent.home"></app-adcons-section>
+  <app-growth-section [item]="homeContent.home"></app-growth-section>
+  <app-value-section [item]="homeContent.home"></app-value-section>
+  <app-services-section [item]="homeContent.home"></app-services-section>
+  <contact [item]="homeContent.home"></contact>
+</div>

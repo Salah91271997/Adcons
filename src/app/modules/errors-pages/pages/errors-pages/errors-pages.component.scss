@@ -1,0 +1,48 @@
+@import "../../../../../assets/styles/base/variables";
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/colors";
+
+// Errors Page Style Start Here
+.errors {
+  height: 100vh;
+  position: relative;
+  @include flexCenter;
+  text-align: center;
+  h1 {
+    font-size: 2.5rem; //159px
+    font-family: $bold;
+    color: #9f9f9f;
+  }
+  h4 {
+    font-family: $semiBold;
+    color: $orange;
+  }
+  span {
+    font-family: $light;
+    color: $blue;
+    display: block;
+  }
+  h1,
+  h4,
+  span {
+    margin-bottom: 1rem;
+  }
+  iframe {
+    // width: 7rem;
+  }
+  .btn-container {
+    // margin-top: 3rem;
+    // display: flex;
+    // justify-content: space-between;
+  }
+
+  // Errors Page  Arabic Style Start Here
+  &.rtl {
+    h1 {
+      // font-family: $tahalof-ar-font-bold;
+    }
+    h2 {
+      // font-family: $tahalof-ar-font-regular;
+    }
+  }
+}

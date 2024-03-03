@@ -1,0 +1,60 @@
+<div class="news-details" setRtl *ngIf="newsDetails$ | async as newsDetails">
+  <div class="adcons-container">
+    <div class="row">
+      <div class="col-12">
+        <navigate
+          [linksName]="['MENU.HOME', 'MENU.NEWS', 'Projects.news']"
+          [pathes]="['/', '/news', '/details/{{newsDetails.id}}']"
+        ></navigate>
+      </div>
+    </div>
+  </div>
+  <div class="header-section-img">
+    <header-section [item]="newsDetails"></header-section>
+    <!-- <img src="../../../../../assets/imgs/Group 249.svg" /> -->
+  </div>
+  <div class="patt">
+    <pattern [rowNumber]="1" [patternNumber]="20" [opacity]="0.3"></pattern>
+  </div>
+  <div class="adcons-container">
+    <div class="details-container">
+      <div class="row">
+        <div class="col-12">
+          <div class="title">
+            <h2>{{ newsDetails.title }}</h2>
+          </div>
+          <div *ngFor="let des of newsDetails.description">
+            <div class="sub-title">
+              <p>
+                {{ des.paragraph }}
+              </p>
+            </div>
+            <ng-container *ngIf="listArr | async as listArr">
+              <ul class="list">
+                <li *ngFor="let item of listArr">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                    >
+                      <rect
+                        id="Rectangle_117"
+                        data-name="Rectangle 117"
+                        width="10"
+                        height="10"
+                        fill="#ff730f"
+                      />
+                    </svg>
+                  </div>
+                  {{ item }}
+                </li>
+              </ul>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

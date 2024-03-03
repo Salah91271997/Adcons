@@ -1,0 +1,54 @@
+<div
+  class="adcons-container news"
+  setRtl
+  *ngIf="currentPageNumber$ | async as currentPageNumber"
+>
+  <div class="row">
+    <div class="col-xl-12">
+      <navigate
+        [linksName]="['MENU.HOME', 'MENU.NEWS']"
+        [pathes]="['/', '/news']"
+      ></navigate>
+    </div>
+  </div>
+  <div class="row" *ngIf="news$ | async as news">
+    <div class="col-lg-4 col-md-6 col-12 card" *ngFor="let newsItem of news">
+      <app-news-item class="news-item" [item]="newsItem"></app-news-item>
+    </div>
+  </div>
+  <nav
+    aria-label="Page navigation example"
+    class="page my-5"
+    *ngIf="newsPageNumber$ | async as pages"
+  >
+    <ul class="pagination d-flex justify-content-center" *ngIf="pages.length">
+      <li class="page-item">
+        <a
+          (click)="paginate(currentPageNumber - 1, pages)"
+          class="page-link"
+          [ngClass]="{ blueLight: currentPageNumber <= 1 }"
+        >
+          &ltdot;
+        </a>
+      </li>
+      <li class="page-item" *ngFor="let page of pages">
+        <a
+          (click)="paginate(page, pages)"
+          class="page-link orange"
+          [ngClass]="{ active: page === currentPageNumber }"
+          >{{ page }}</a
+        >
+      </li>
+      <li class="page-item">
+        <a
+          (click)="paginate(currentPageNumber + 1, pages)"
+          class="page-link"
+          [ngClass]="{ blueLight: currentPageNumber >= pages.length }"
+        >
+          <!-- > -->
+          &gtdot;
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

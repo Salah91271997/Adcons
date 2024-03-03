@@ -1,0 +1,130 @@
+// Adcons Prompt Font
+
+// thin
+@font-face {
+  font-family: "promptThin";
+  src: url("../../fonts/thin/Prompt-Thin.eot"),
+    url("../../fonts/thin/Prompt-Thin.woff2") format("woff2"),
+    url("../../fonts/thin/Prompt-Thin.woff") format("woff"),
+    url("../../fonts/thin/Prompt-Thin.ttf") format("truetype");
+}
+
+// light
+@font-face {
+  font-family: "promptLight";
+  src: url("../../fonts/light/Prompt-Light.eot"),
+    url("../../fonts/light/Prompt-Light.woff2") format("woff2"),
+    url("../../fonts/light/Prompt-Light.woff") format("woff"),
+    url("../../fonts/light/Prompt-Light.ttf") format("truetype");
+}
+
+// Regular
+@font-face {
+  font-family: "promptRegular";
+  src: url("../../fonts/regular/Prompt-Regular.eot"),
+    url("../../fonts/regular/Prompt-Regular.woff2") format("woff2"),
+    url("../../fonts/regular/Prompt-Regular.woff") format("woff"),
+    url("../../fonts/regular/Prompt-Regular.ttf") format("truetype");
+}
+
+// medium
+@font-face {
+  font-family: "promptMedium";
+  src: url("../../fonts/medium/Prompt-Medium.eot"),
+    url("../../fonts/medium/Prompt-Medium.woff2") format("woff2"),
+    url("../../fonts/medium/Prompt-Medium.woff") format("woff"),
+    url("../../fonts/medium/Prompt-Medium.ttf") format("truetype");
+}
+
+// SemiBold
+@font-face {
+  font-family: "promptSemiBold";
+  src: url("../../fonts/semi-bold/Prompt-SemiBold.eot"),
+    url("../../fonts/semi-bold/Prompt-SemiBold.woff2") format("woff2"),
+    url("../../fonts/semi-bold/Prompt-SemiBold.woff") format("woff"),
+    url("../../fonts/semi-bold/Prompt-SemiBold.ttf") format("truetype");
+}
+
+// Bold
+@font-face {
+  font-family: "promptBold";
+  src: url("../../fonts/bold/Prompt-Bold.eot"),
+    url("../../fonts/bold/Prompt-Bold.woff2") format("woff2"),
+    url("../../fonts/bold/Prompt-Bold.woff") format("woff"),
+    url("../../fonts/bold/Prompt-Bold.ttf") format("truetype");
+}
+
+// Arb style
+
+// cairo Light
+
+@font-face {
+  font-family: "cairoLight";
+  src: url("../../fonts/ar-cairo/light/Cairo-Light.eot"),
+    url("../../fonts/ar-cairo/light/Cairo-Light.woff2") format("woff2"),
+    url("../../fonts/ar-cairo/light/Cairo-Light.woff") format("woff"),
+    url("../../fonts//ar-cairo/light/Cairo-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "cairoRegular";
+  src: url("../../fonts/ar-cairo/regular/Cairo-Regular.eot"),
+    url("../../fonts/ar-cairo/regular/Cairo-Regular.woff2") format("woff2"),
+    url("../../fonts/ar-cairo/regular/Cairo-Regular.woff") format("woff"),
+    url("../../fonts//ar-cairo/regular/Cairo-Regular.ttf") format("truetype");
+}
+
+// Cairo Medium
+
+@font-face {
+  font-family: "cairoMedium";
+  src: url("../../fonts/ar-cairo/medium/Cairo-Medium.eot"),
+    url("../../fonts/ar-cairo/medium/Cairo-Medium.woff2") format("woff2"),
+    url("../../fonts/ar-cairo/medium/Cairo-Medium.woff") format("woff"),
+    url("../../fonts//ar-cairo/medium/Cairo-Medium.ttf") format("truetype");
+}
+
+// cairo semiBold
+
+@font-face {
+  font-family: "cairoSemiBold";
+  src: url("../../fonts/ar-cairo/semiBold/Cairo-SemiBold.eot"),
+    url("../../fonts/ar-cairo/semiBold/Cairo-SemiBold.woff2") format("woff2"),
+    url("../../fonts/ar-cairo/semiBold/Cairo-SemiBold.woff") format("woff"),
+    url("../../fonts//ar-cairo/semiBold/Cairo-SemiBold.ttf") format("truetype");
+}
+
+// cairo Bold
+
+@font-face {
+  font-family: "cairoBold";
+  src: url("../../fonts/ar-cairo/Bold/Cairo-Bold.eot"),
+    url("../../fonts/ar-cairo/Bold/Cairo-Bold.woff2") format("woff2"),
+    url("../../fonts/ar-cairo/Bold/Cairo-Bold.woff") format("woff"),
+    url("../../fonts//ar-cairo/Bold/Cairo-Bold.ttf") format("truetype");
+}
+
+/* Prompt  Font Family */
+$thin: "promptThin", sans-serif; // regular
+
+// All Light fonts Will be Regular
+$light: "promptRegular", sans-serif;
+
+$regular: "promptRegular", sans-serif; // regular
+
+$medium: "promptMedium", sans-serif; // regular
+
+$semiBold: "promptSemiBold", sans-serif; //bold
+
+$bold: "promptBold", sans-serif; //bold
+
+/* cairo  Font Family */
+$ca-light: "cairoLight", sans-serif;
+
+$ca-regular: "cairoRegular", sans-serif;
+
+$ca-medium: "cairoMedium", sans-serif;
+
+$ca-S-bold: "cairoSemiBold", sans-serif;
+
+$ca-bold: "cairoBold", sans-serif;

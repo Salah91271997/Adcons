@@ -1,0 +1,64 @@
+<div
+  class="growth"
+  style="
+    background-image: url(assets/imgs/pexels-gotta-be-worth-it-1021203.jpg);
+  "
+  setRtl
+>
+  <div class="adcons-container">
+    <div class="growth-title">
+      <h3>{{ item.project_title }}</h3>
+      <h3>{{ item.project_title_highlighted }}</h3>
+    </div>
+    <div class="boxs-container">
+      <div class="row">
+        <div class="col-lg-3 col-6">
+          <div class="box">
+            <h2>{{ item.project_value_number }}</h2>
+            <p>
+              {{ item.project_value_title }}
+            </p>
+            <div class="box-overlay"></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="box">
+            <h2>{{ item.project_area_number }}</h2>
+            <p>
+              {{ item.project_area_title }}
+            </p>
+            <div class="box-overlay"></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="box">
+            <h2>{{ item.project_experience_number }}</h2>
+            <p>
+              {{ item.project_experience_title }}
+            </p>
+            <div class="box-overlay"></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="box">
+            <h2>{{ item.project_growing_number }}</h2>
+            <p>
+              {{ item.project_growing_title }}
+            </p>
+            <div class="box-overlay"></div>
+          </div>
+        </div>
+        <div class="col-xl-12">
+          <div class="btn-container">
+            <button class="orange-btn" routerLink="/projects">
+              {{ item.all_project_btn }}
+              <div class="on-hover"></div>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+</div>

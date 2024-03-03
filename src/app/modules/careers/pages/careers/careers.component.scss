@@ -1,0 +1,26 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+
+.careers {
+  .card {
+    border: 0;
+    background-color: transparent;
+    .career-item {
+      height: 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
+  .load-more {
+    color: $orange;
+    font-family: $medium;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+  // Arabic Style Start Here
+  &.rtl {
+    .load-more {
+      font-family: $ca-medium;
+    }
+  }
+}

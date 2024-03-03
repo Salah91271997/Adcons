@@ -1,0 +1,99 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/mixins";
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/variables";
+.growth {
+  position: relative;
+  @include background-image;
+  padding: 5rem 0;
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($blue, 50%);
+  }
+  .growth-title {
+    position: relative;
+    z-index: 11;
+    h3 {
+      font-family: $semiBold;
+      &:first-child {
+        color: $white;
+      }
+      &:last-child {
+        color: $orange;
+      }
+    }
+  }
+
+  .boxs-container {
+    .box {
+      position: relative;
+      backdrop-filter: blur(10px);
+      position: relative;
+      z-index: 11;
+      height: 20vh;
+      margin: 1rem auto;
+      @include flexCenter;
+      text-align: center;
+      flex-direction: column;
+      width: 100%;
+      @include large-screen {
+        width: 85%;
+        margin: 4rem auto;
+        height: 27vh;
+      }
+      .box-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #a0aab4;
+        opacity: 0.3;
+      }
+      h2,
+      p {
+        color: $white;
+      }
+      h2 {
+        font-family: $bold;
+      }
+      p {
+        font-family: $regular;
+        padding-top: 0.3rem;
+      }
+    }
+  }
+  .growth-title,
+  .btn-container {
+    margin-inline-start: 0;
+    @include large-screen {
+      margin-inline-start: 2%;
+    }
+  }
+  .btn-container {
+    margin-top: 2rem;
+    @include large-screen {
+      margin-top: 0rem;
+    }
+  }
+
+  &.rtl {
+    .growth-title {
+      h3 {
+        font-family: $ca-S-bold;
+      }
+    }
+    .boxs-container {
+      .box {
+        h2 {
+          font-family: $ca-bold;
+        }
+        p {
+          font-family: $ca-regular;
+        }
+      }
+    }
+  }
+}

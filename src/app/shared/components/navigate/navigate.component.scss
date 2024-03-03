@@ -1,0 +1,42 @@
+@import "../../../../assets/styles/base/variables";
+@import "../../../../assets/styles/base/colors";
+@import "../../../../assets/styles/base/typography";
+
+/* navigatet Styles Start Here */
+
+.navigate {
+  padding: 2.5rem 0;
+  a {
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .prev {
+    color: rgba($blue, 49%);
+    font-family: $regular;
+
+    &::after {
+      content: ">";
+      margin: 0 0.5rem;
+    }
+  }
+  .current {
+    color: $orange;
+    font-family: $regular;
+  }
+}
+
+/* navigatet Ar Styles Start Here */
+
+.rtl {
+  .prev {
+    font-family: $ca-regular;
+    &::after {
+      content: "<";
+    }
+  }
+  .current {
+    font-family: $ca-regular;
+  }
+}

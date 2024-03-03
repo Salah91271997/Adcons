@@ -1,0 +1,79 @@
+<div class="services-section" setRtl>
+  <div class="patt">
+    <pattern [rowNumber]="10" [patternNumber]="20"></pattern>
+  </div>
+  <div class="adcons-container">
+    <div class="body">
+      <div class="row justify-content-between">
+        <div class="col-xl-3 col-md-12">
+          <div class="main-title">
+            <h3>{{ item.service_title }}</h3>
+            <span class="white my-3">{{
+              item.service_description | subText
+            }}</span>
+            <div class="btn-container">
+              <button class="orange-btn" routerLink="/services">
+                {{ item.service_btn }}
+                <div class="on-hover"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-8 col-md-12">
+          <div class="service-boxs-container">
+            <div class="row">
+              <div class="col-md-6">
+                <div
+                  class="service-box service-box__1"
+                  routerLink="/services/{{ item.service_1.id }}"
+                >
+                  <img [src]="imgUrl + item.service_1.icon" />
+                  <h5>{{ item.service_1.name }}</h5>
+                  <p>
+                    {{ item.service_1.description | subText }}
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div
+                  class="service-box service-box__1"
+                  routerLink="/services/{{ item.service_2.id }}"
+                >
+                  <img [src]="imgUrl + item.service_2.icon" />
+                  <h5>{{ item.service_2.name }}</h5>
+                  <p>
+                    {{ item.service_2.description | subText }}
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div
+                  class="service-box"
+                  routerLink="/services/{{ item.service_3.id }}"
+                >
+                  <img [src]="imgUrl + item.service_3.icon" />
+                  <h5>{{ item.service_3.name }}</h5>
+                  <p>
+                    {{ item.service_3.description | subText }}
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div
+                  class="service-box"
+                  routerLink="/services/{{ item.service_4.id }}"
+                >
+                  <img [src]="imgUrl + item.service_4.icon" />
+                  <h5>{{ item.service_4.name }}</h5>
+                  <p>
+                    {{ item.service_4.description | subText }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

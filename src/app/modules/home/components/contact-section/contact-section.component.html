@@ -1,0 +1,18 @@
+<div class="contact-section" setRtl>
+  <div class="adcons-container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div class="contact-info">
+          <h2>{{ item.contact_us_title }}</h2>
+          <h2>{{ item.contact_us_title_highlighted }}</h2>
+        </div>
+        <div class="logo">
+          <img [src]="imgUrl + item.contact_us_logo" />
+        </div>
+      </div>
+      <div class="col-md-5">
+        <contact-us-form [contactUs]="item"></contact-us-form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="career-details" setRtl>
+  <ng-container *ngIf="carrerDetails$ | async as carrerDetails">
+    <div class="adcons-container">
+      <navigate
+        [linksName]="['MENU.HOME', 'MENU.CAREER', carrerDetails.name]"
+        [pathes]="['', '/careers', '/careers/' + pageSlug]"
+      ></navigate>
+    </div>
+    <details-header
+      [careerDetails]="{
+        details: carrerDetails.name,
+        location: carrerDetails.location,
+        work_type: carrerDetails.work_type
+      }"
+    ></details-header>
+    <pattern [rowNumber]="1" [patternNumber]="20"></pattern>
+    <job-description
+      [jobDescription]="carrerDetails.description"
+    ></job-description>
+    <resposibilities
+      [title]="carrerDetails.requirement_title"
+      [responsibilities]="carrerDetails.responsibility_description"
+    ></resposibilities>
+    <resposibilities
+      [title]="'Job Requirments'"
+      [responsibilities]="carrerDetails.requirement_description"
+    ></resposibilities>
+    <location
+      [locationDetails]="{
+        location: carrerDetails.location,
+        work_days: carrerDetails.work_days
+      }"
+    ></location>
+    <career-form [pageId]="pageSlug"></career-form>
+  </ng-container>
+</div>

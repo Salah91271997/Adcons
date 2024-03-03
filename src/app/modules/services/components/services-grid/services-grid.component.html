@@ -1,0 +1,23 @@
+<div class="services" setRtl>
+  <div class="adcons-container">
+    <navigate
+      [linksName]="['MENU.HOME', 'MENU.SERVICES']"
+      [pathes]="['', '/services']"
+    ></navigate>
+    <careers-header
+      [description]="services?.service_page?.description"
+      [title]="services?.service_page?.title"
+    ></careers-header>
+
+    <div class="services-grid">
+      <div class="row">
+        <div
+          class="col-md-6 col-xl-4"
+          *ngFor="let box of services?.services"
+        >
+          <service-item [serviceItem]="box"></service-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

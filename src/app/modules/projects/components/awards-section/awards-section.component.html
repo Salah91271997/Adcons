@@ -1,0 +1,33 @@
+<div class="project-details mt-5" setRtl *ngIf="item?.product_certificates">
+  <div class="adcons-container">
+    <div class="row">
+      <div class="col-12 my-3">
+        <img src="../../../../../assets/imgs/Adcons Award.svg" class="logo" />
+      </div>
+    </div>
+    <div class="row justify-content-between">
+      <div class="col-md-5 col-12 order-2 order-lg-1">
+        <div class="title">
+          <h2>{{ item?.product_certificates?.title }}</h2>
+        </div>
+        <div class="sub-title mt-3">
+          <p>
+            {{ item?.product_certificates?.description }}
+          </p>
+        </div>
+      </div>
+      <div class="col-md-5 col-12 order-1 order-lg-2">
+        <div class="d-flex justify-content-center h-100 mb-5">
+          <img
+            [src]="imgUrl + item?.product_certificates?.certificate_1"
+            class="certifacte"
+          />
+          <img
+            [src]="imgUrl + item?.product_certificates?.certificate_2"
+            class="certifacte --2"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

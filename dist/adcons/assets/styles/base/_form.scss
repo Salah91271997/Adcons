@@ -1,0 +1,85 @@
+@import "colors";
+@import "typography";
+@import "mixins";
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  .form-control-label {
+    // margin-bottom: 0.5rem;
+    line-height: 1.5;
+    font-size: 1.125rem;
+    color: $orange;
+    font-family: $regular;
+    .required {
+      color: $orange;
+    }
+  }
+
+  .form-control {
+    margin: 0;
+    height: auto;
+    min-height: 3rem;
+    padding: 0.65rem 1rem 0.55rem;
+    font-size: 1rem;
+    border: 0;
+    border-bottom: solid 1px $white;
+    font-family: $regular;
+    border-radius: 0;
+    background-color: $white;
+    &.gray {
+      background-color: $grey !important;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+    &:disabled {
+      background-color: disabled;
+    }
+    &.has-error {
+      &:not(.disabled) {
+        border: 1px solid $error;
+      }
+    }
+    &.textarea {
+      height: 10.438rem;
+      resize: none;
+      background-color: $white;
+    }
+    &::placeholder {
+      color: rgba($darkgrey, 40%);
+      font-family: $regular;
+    }
+  }
+  // span {
+  //   color: $darkgrey;
+  //   font-family: $regular;
+  //   margin: 0.2rem 0 0.8rem 0;
+  //   opacity: 0.4;
+  // }
+  .error-message {
+    width: 105%;
+    position: absolute;
+    color: $error;
+    font-size: 0.7rem;
+    @include x-small-screen {
+      bottom: -19px;
+    }
+    @include large-screen {
+      bottom: -23px;
+    }
+    .message {
+      width: 100%;
+      display: block;
+    }
+  }
+  &.rtl {
+    .form-control-label,
+    .form-control {
+      font-family: $ca-regular;
+    }
+  }
+}

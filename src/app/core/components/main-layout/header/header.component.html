@@ -1,0 +1,315 @@
+<header setRtl>
+  <div class="labtos-menu">
+    <div class="adcons-container">
+      <div class="d-flex justify-content-between">
+        <div class="logo">
+          <a class="navbar-brand" routerLink="/">
+            <img
+              src="assets/imgs/logo/Group 392.png"
+              alt="adcons Logo"
+              class="img-fluid"
+            />
+          </a>
+        </div>
+        <div class="links d-flex align-items-center">
+          <ul class="ul">
+            <li class="link">
+              <a routerLinkActive="active-link" routerLink="/about-us">{{
+                "MENU.ABOUT_US" | translate
+              }}</a>
+            </li>
+            <ng-container
+              *ngIf="
+                projectsAndServicesList$ | async as projectsAndServicesList
+              "
+            >
+              <li class="active-dropdown">
+                <a routerLinkActive="active-link">
+                  <div class="dropdown" Hover>
+                    <button
+                      routerLink="/services"
+                      class="btn btn-secondary dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      {{ "MENU.SERVICES" | translate }}
+                    </button>
+                    <div class="svg">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="11.097"
+                        height="6.345"
+                        viewBox="0 0 11.097 6.345"
+                      >
+                        <path
+                          id="Icon_ionic-ios-arrow-down"
+                          data-name="Icon ionic-ios-arrow-down"
+                          d="M11.738,15.679l4.2-4.2a.79.79,0,0,1,1.12,0,.8.8,0,0,1,0,1.123L12.3,17.361a.792.792,0,0,1-1.094.023L6.419,12.606a.793.793,0,0,1,1.12-1.123Z"
+                          transform="translate(-6.188 -11.246)"
+                          fill=""
+                          opacity="1"
+                        />
+                      </svg>
+                    </div>
+
+                    <ul class="menu" id="menu1">
+                      <li
+                        *ngFor="
+                          let service of projectsAndServicesList?.serivces
+                        "
+                        [routerLink]="'services/' + service?.id"
+                        class="li"
+                      >
+                        <span class="dropdown-item">
+                          {{ service?.name }}
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+              <li class="active-dropdown">
+                <a routerLinkActive="active-link">
+                  <div class="dropdown" Hover>
+                    <button
+                      routerLink="/projects"
+                      class="btn btn-secondary dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      {{ "MENU.PROJECTS" | translate }}
+                    </button>
+                    <div class="svg">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="11.097"
+                        height="6.345"
+                        viewBox="0 0 11.097 6.345"
+                      >
+                        <path
+                          id="Icon_ionic-ios-arrow-down"
+                          data-name="Icon ionic-ios-arrow-down"
+                          d="M11.738,15.679l4.2-4.2a.79.79,0,0,1,1.12,0,.8.8,0,0,1,0,1.123L12.3,17.361a.792.792,0,0,1-1.094.023L6.419,12.606a.793.793,0,0,1,1.12-1.123Z"
+                          transform="translate(-6.188 -11.246)"
+                          fill=""
+                          opacity="1"
+                        />
+                      </svg>
+                    </div>
+                    <ul class="menu">
+                      <li
+                        *ngFor="
+                          let project of projectsAndServicesList?.products
+                        "
+                        [routerLink]="'projects/details/' + project.id"
+                      >
+                        <span class="dropdown-item">{{ project?.name }} </span>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+            </ng-container>
+
+            <li class="link">
+              <a routerLinkActive="active-link" routerLink="/news">{{
+                "MENU.NEWS" | translate
+              }}</a>
+            </li>
+            <li class="link">
+              <a routerLinkActive="active-link" routerLink="/careers">{{
+                "MENU.CAREER" | translate
+              }}</a>
+            </li>
+            <li class="link">
+              <a class="active-link bold" routerLink="/contact-us"
+                >{{ "MENU.CONTACT_US" | translate }}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="9.46"
+                  height="9.46"
+                  viewBox="0 0 9.46 9.46"
+                >
+                  <g
+                    id="Icon_feather-arrow-up-right"
+                    data-name="Icon feather-arrow-up-right"
+                    transform="translate(-9.793 -9.793)"
+                  >
+                    <path
+                      id="Path_378"
+                      data-name="Path 378"
+                      d="M10.5,18.546,18.546,10.5"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                    />
+                    <path
+                      id="Path_379"
+                      data-name="Path 379"
+                      d="M10.5,10.5h8.046v8.046"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a class="change-lang" (click)="changeLang()">
+                {{ isArabic ? "En" : "AR" }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu start From Here  -->
+  <div class="mobile-menu">
+    <div class="menu-header">
+      <div class="logo">
+        <a class="navbar-brand" routerLink="/">
+          <img
+            src="assets/imgs/logo/Group 392.png"
+            alt="adcons Logo"
+            class="img-fluid"
+          />
+        </a>
+      </div>
+      <a
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasExample"
+        aria-controls="offcanvasExample"
+      >
+        <svg
+          _ngcontent-cmr-c26=""
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="35"
+          fill="#0e3166"
+          viewBox="0 0 16 16"
+          class="bi bi-justify"
+        >
+          <path
+            _ngcontent-cmr-c26=""
+            fill-rule="evenodd"
+            d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <svg
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="#fff"
+          class="bi bi-x-circle"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+          />
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+          />
+        </svg>
+      </div>
+      <div class="offcanvas-body text-center">
+        <ul>
+          <li>
+            <a
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              [routerLinkActiveOptions]="{ exact: true }"
+              routerLinkActive="active-link"
+              routerLink="/"
+              >{{ "MENU.HOME" | translate }}
+            </a>
+          </li>
+          <li>
+            <a
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              routerLinkActive="active-link"
+              routerLink="/about-us"
+              >{{ "MENU.ABOUT_US" | translate }}</a
+            >
+          </li>
+          <li>
+            <a
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              routerLinkActive="active-link"
+              routerLink="/services"
+              >{{ "MENU.SERVICES" | translate }}</a
+            >
+          </li>
+          <li>
+            <a
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              routerLinkActive="active-link"
+              routerLink="/projects"
+              >{{ "MENU.PROJECTS" | translate }}</a
+            >
+          </li>
+          <li>
+            <a
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              routerLinkActive="active-link"
+              routerLink="/news"
+              >{{ "MENU.NEWS" | translate }}</a
+            >
+          </li>
+          <li>
+            <a
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              routerLinkActive="active-link"
+              routerLink="/careers"
+              >{{ "MENU.CAREER" | translate }}</a
+            >
+          </li>
+          <li>
+            <a
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              routerLinkActive="active-link"
+              routerLink="/contact-us"
+              >{{ "MENU.CONTACT_US" | translate }}</a
+            >
+          </li>
+
+          <li>
+            <a
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              class="change-lang"
+              (click)="changeLang()"
+            >
+              {{ isArabic ? "En" : "Ar" }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

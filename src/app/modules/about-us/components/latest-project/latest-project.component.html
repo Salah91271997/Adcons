@@ -1,0 +1,72 @@
+<div class="latest-project" setRtl>
+  <div class="adcons-container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="latest-details">
+          <h5>
+            {{ project?.achievements_title }}
+          </h5>
+          <p>
+            {{ project?.achievements_description }}
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="latest-boxs">
+          <div class="box">
+            <span>
+              {{ project?.achievements_projects_no }}
+            </span>
+            <small>
+              {{ project?.achievements_projects_description }}
+            </small>
+          </div>
+          <div class="box">
+            <span>
+              {{ project?.achievements_employees_no }}
+            </span>
+            <small>
+              {{ project?.achievements_employees_description }}
+            </small>
+          </div>
+          <div class="box">
+            <span>
+              {{ project?.achievements_locations_no }}
+            </span>
+            <small>
+              {{ project?.achievements_locations_description }}
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project">
+      <div class="row gap-3 gap-xl-0">
+        <div class="col-xl-6 order-last order-md-first">
+          <div class="prject-details">
+            <h5 class="title">
+              {{ project?.projects_title }}
+            </h5>
+            <div class="sub-details">
+              <p class="mb-4">
+                {{ project?.projects_description }}
+              </p>
+            </div>
+            <div class="btn-container" routerLink="/projects">
+              <button class="blue-btn">
+                {{ project?.projects_btn }}
+                <div class="on-hover"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6">
+          <div class="project-image">
+            <img [src]="imgUrl + project?.projects_image" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

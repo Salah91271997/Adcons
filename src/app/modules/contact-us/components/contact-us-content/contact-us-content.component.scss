@@ -1,0 +1,28 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/mixins";
+.details {
+  padding: 2rem;
+  h2 {
+    color: $orange;
+    font-family: $medium;
+  }
+  p {
+    color: $blue;
+    font-family: $light;
+    margin: 2rem 0;
+  }
+  img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+  // arabic style
+  &.rtl {
+    h2 {
+      font-family: $ca-medium;
+    }
+    p {
+      font-family: $ca-light;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<ng-container *ngIf="serviceData$ | async as serviceData">
+  <services-grid [services]="serviceData"></services-grid>
+  <our-project [project]="serviceData.service_page"></our-project>
+  <lets-build
+    [build]="{
+      title1: serviceData.service_page.here_for_you_title1,
+      title2: serviceData.service_page.here_for_you_title2,
+      description: serviceData.service_page.here_for_you_description,
+      button: serviceData.service_page.contact_button
+    }"
+  ></lets-build>
+</ng-container>

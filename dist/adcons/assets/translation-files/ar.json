@@ -1,0 +1,155 @@
+{
+  "MENU": {
+    "ADCONS": "الدوليه",
+    "ABOUT_US": "عنا",
+    "SERVICES": "خدمات",
+    "SERVICESDETAILS": "تفاصيل-الخدمات",
+    "CAREER": "مسار وظيفي",
+    "NEWS": "أخبار",
+    "404": "صفحة خطأ",
+    "500": "مشكلة فى الخادم",
+    "HOME": "الرئيسية",
+    "CONTACT_US": "أتصل بنا",
+    "TERMS_CONDITIONS": "الشروط والأحكام",
+    "PRIVACY_POLICY": "سياسة الخصوصية",
+    "FAQ": "التعليمات",
+    "PROJECTS": "مشاريع",
+    "COMPANY": "شركة",
+    "NEWSLATTER": "النشرة الإخبارية"
+  },
+  "ERROR_PAGES": {
+    "HOME": "الرئيسية",
+    "BACK": "العودة للصفحة الرئيسية",
+    "ACCESS_DENIED": "غير مسموح",
+    "NOT_FOUND": "صفحة خطأ",
+    "NOT_FOUND_MAIN_TITLE": "يبدو أنك تائه.",
+    "NOT_FOUND_TITLE": "هذه الصفحة التي تبحث عنها غير متوفرة الآن.",
+    "WE_HELP": "الصفحة التى تبحث عنها غير موجودة.",
+    "SERVER_ERROR": "مشكلة فى الخادم",
+    "WRONG_SERVER": "برجاء المحاولة فى وقت لاحق."
+  },
+  "VALIDATION_MESSAGES": {
+    "EMAIL_REQUIRED": "البريد الإلكترونى مطلوب",
+    "EMAIL_INVALID": "من فضلك أكتب بريد إلكترونى صحيح",
+    "INVALID_NUMBER": "من فضلك أكتب رقم صحيح",
+    "INVALID_YEAR": "من فضلك ادخل سنه صحيحه",
+    "COUNTRY_REQUIRED": "الدلوة مطلوبه",
+    "INVALID_ENGLISH": "مسموح بأحرف أنجليزية فقط",
+    "INVALID_ARABIC": "مسموح بأحرف عربية فقط",
+    "INVALID_EN_ALPHA_NUM": "مسموح فقط بأرقام وحروف إنجليزية",
+    "INVALID_AR_ALPHA_NUM": "مسموح فقط بأرقام وحروف عربية",
+    "INVALID_PHONE_NUMBER": "من فضلك أكتب رقم هاتف صحيح",
+    "FIRST_NAME_REQUIRED": "الأسم الاول مطلوب",
+    "MID_NAME_REQUIRED": "اسم الاب مطلوب",
+    "LAST_NAME_REQUIRED": "الأسم الجد مطلوب",
+    "PHONE_NUMBER_REQUIRED": "رقم الهاتف مطلوب",
+    "INVALID_AR_EN": "مسموح بالحروف الإنجليزية والعربية فقط",
+    "CV": "السيرة الذاتية مطلوبه",
+    "MESSAGE": "الرساله مطلوبه",
+    "SOCIAL_LINK": "يجب اضافة لينك اخر",
+    "INVALID_URL": " URL غير صالح",
+    "EMPLOYER": {
+      "DESIGNATION_REQUIRED": "المسمى الوظيفى مطلوب",
+      "COMPANY_REQUIRED": "اسم الشركة مطلوب",
+      "START_DATE_REQUIRED": "تاريح البداية مطلوب",
+      "END_DATE_REQUIRED": "تاريح الانتاء مطلوب",
+      "SUMMARY_REQUIRED": "الملخص مطلوب",
+      "REMOVE_EMPLOYER": "مسح الخبرة"
+    },
+    "EDUCATION": {
+      "UNIVERSITY_REQUIRED": "اسم الجامعة مطلوب",
+      "GRADUATION_YEAR_REQUIRED": "سنة التحرج مطلوبة",
+      "EDUCATION_DEGREE_REQUIRED": "درجة التعليم مطلوبة",
+      "MAJOR_REQUIRED": "منصب - الرتبة ملطوب",
+      "POST_REQUIRED": "دراسات عليا مطلوبة "
+    },
+    "END_FO_LENGTH": "لا يمكنك إضافة أكثر من 5"
+  },
+  "LABELS": {
+    "NAME": "الاسم",
+    "E_MAIL": "البريد الالكارونى",
+    "PHONE": "رقم الهاتف",
+    "MOBILE": "رقم الموبيل",
+    "COUNRTY": "البلد",
+    "ATTACH_FILES": "ملف",
+    "SUBJECT": "الموضوع",
+    "MESSAGE": "الرساله",
+    "SOCIAL": "وسائل التواصل الاجتماعي وروابط الويب",
+    "FIRST_NAME": "الاسم الاول",
+    "M_NAME": "اسم الاب",
+    "LAST_NAME": "الاسم الاخير",
+    "EMPLOYER": {
+      "DESIGNATION": "تعيين",
+      "BUSINESS_NAME": "اسم الشركة / النشاط التجاري",
+      "START": "تاريخ البدء",
+      "END": "تاريخ الانتهاء",
+      "CURRENTLY": "أعمل هناك حاليًا",
+      "SUMMERY": "ملخص"
+    },
+    "EDUCATION": {
+      "UNIVERSITY": "جامعة",
+      "GRADUATION": "سنة التخرج",
+      "DEGREE": "درجة التعليم",
+      "MAJOR": "منصب - الرتبة",
+      "POST_GRADUATE": "دراسات عليا"
+    },
+    "PLACEHOLDER": {
+      "APPLICATION": "أدخل طلبك"
+    }
+  },
+  "FOOTER": {
+    "NEWSLATTER": "اشترك للحصول على أحدث الأخبار والرؤى من",
+    "SUBSCRIBE": "اشتراك",
+    "NEWSLATTER_PLACEHOLDER": " بريدك  الإلكتروني",
+    "DESCRIPTION": "تطبق الشركة معايير دولية أعلى للسلامة والمعايير الصناعية والمهنية على موظفيها."
+  },
+  "CAREERS": {
+    "APPLY": "يتقدم",
+    "APPLY_NOW": "قدم الان",
+    "LOCATION": "الموقع",
+    "SUBMIT_YOUR_APP": "تقديم طلبك",
+    "TYPE": "نوع العمل",
+    "DAYS": "ايام العمل",
+    "SUBMIT": "ارسال",
+    "JOB_DESCRIPTION": "المسمى الوظيفي",
+    "JOB_REQURIMENTS": "متطلبات العمل",
+    "FILL_YOU_FORM": "املأ النموذج الخاص بك الآن",
+    "PROVIDE": "زودنا بروابط لمشاهدة بعض أعمالك (Gif / Dribbble / Behance / Medium)",
+    "EMPLOYER": {
+      "TITLE": "موظف",
+      "REMOVE": "ازاله الوظيفة",
+      "ADD": "اضافة وظيفة"
+    },
+    "EDUCATION": {
+      "TITLE": "تعليم",
+      "ADD": "اضافة شهادة تعليمية"
+    },
+    "SUBMIT_APP": "قدم الطلب",
+    "LOAD_MORE": "حمل المزيد",
+    "HANDEL_FORM_ERRORS": {
+      "EMAIL_EXISTS": "مهنة مع هذا البريد الإلكتروني موجودة بالفعل",
+      "FORMAT": "يجب رفع السيرة الذاتية PDF او Docx",
+      "ZIZE": "حجم الملف كبير للغاية و يجب الا يتجاوز ال 10 ميجا بايت"
+    }
+  },
+  "Home": {
+    "Read": "قراءة المزيد",
+    "AllP": "كل المشاريع",
+    "Veiw": "رؤية التفاصيل"
+  },
+  "Projects": {
+    "All": "كل ",
+    "Filter": "مصنف بواسطة",
+    "veiw": "عرض التفاصيل",
+    "Details": "تفاصيل المشروع",
+    "Location": "الموقع",
+    "AllP": "كل المشاريع",
+    "Sector": "شريحة",
+    "Area": "منطقة",
+    "Year": "عام",
+    "No": "لا يوجد مشاريع مضافة حتى الان",
+    "Explore": "تصفح مزيد من المشاريع",
+    "read": "رؤية المزيد",
+    "news": "تفاصيل الاخبار"
+  }
+}

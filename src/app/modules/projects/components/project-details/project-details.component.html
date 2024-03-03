@@ -1,0 +1,11 @@
+<div *ngIf="projectsDetails$ | async as detailsContent">
+  <app-king-section [item]="detailsContent.product"></app-king-section>
+  <app-image-section [item]="detailsContent.product"></app-image-section>
+
+  <app-details-section [item]="detailsContent.product"></app-details-section>
+  <app-projects-section
+    [item]="detailsContent.related_products"
+  ></app-projects-section>
+  <!-- <app-location-section [item]="detailsContent.product"></app-location-section> -->
+  <!-- <app-awards-section [item]="detailsContent.product"></app-awards-section> -->
+</div>

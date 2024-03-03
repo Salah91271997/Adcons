@@ -1,0 +1,17 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/mixins";
+
+.form {
+  h3 {
+    color: $blue;
+    font-family: $regular;
+    padding-bottom: 1.5rem;
+  }
+  // arabic style
+  &.rtl {
+    h3 {
+      font-family: $ca-regular;
+    }
+  }
+}

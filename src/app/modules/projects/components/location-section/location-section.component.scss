@@ -1,0 +1,22 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+.project-details-location {
+  background-color: $blue;
+  .cursor {
+    cursor: pointer;
+  }
+  .location {
+    text-decoration: underline !important;
+    text-decoration-color: $white;
+    color: $white;
+    font-family: $light;
+  }
+  .location-img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  iframe {
+    width: 100%;
+    height: 60vh;
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/mixins";
+.project-details {
+  background-color: $grey;
+  padding: 5rem 0;
+  .logo {
+    width: 4rem;
+    height: 4rem;
+  }
+  .certifacte {
+    &.--2 {
+      transform: translateY(18%);
+      margin: 0 3rem;
+    }
+    @include x-small-screen {
+      width: 10rem;
+      height: 12rem;
+    }
+    @include normal-screen {
+      width: 12rem;
+      height: 19rem;
+    }
+    @include large-screen {
+      width: 16.25rem;
+      height: 22.625rem;
+    }
+  }
+}

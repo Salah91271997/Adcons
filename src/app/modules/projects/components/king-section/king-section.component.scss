@@ -1,0 +1,88 @@
+@import "../../../../../assets/styles/base/variables";
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/mixins";
+.project-details {
+  .img-header {
+    height: 55vh;
+    @include background-image;
+    object-fit: cover;
+    @include large-screen {
+      height: 75vh;
+    }
+  }
+  .img-top-section {
+    @include x-small-screen {
+      width: 100%;
+      margin-top: 2rem;
+      display: block;
+      text-align: center;
+    }
+    @include large-screen {
+      width: 70%;
+      margin-top: -128px;
+      display: flex;
+      text-align: unset;
+    }
+    background-color: $blue;
+    padding: 2.5rem;
+    margin-inline-start: auto;
+    position: relative;
+    z-index: 10;
+    span {
+      font-family: $regular;
+    }
+    .box-title {
+      color: $orange;
+    }
+    .box-info {
+      color: $white;
+      @include x-small-screen {
+        padding-bottom: 1rem;
+      }
+      @include large-screen {
+        padding-bottom: 0;
+      }
+    }
+  }
+  .project-info {
+    max-width: 95%;
+    padding-inline-start: 2rem;
+    @include medium-screen {
+      max-width: 85%;
+    }
+
+    @include large-screen {
+      padding-inline-start: 4rem;
+    }
+
+    padding-top: 1rem;
+    h5 {
+      color: $orange;
+      font-family: $semiBold;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      font-family: $light;
+      color: $blue;
+    }
+  }
+  //  Ar Style Start From Here
+  &.rtl {
+    .img-header {
+      .img-top-section {
+        span {
+          font-family: $ca-regular;
+        }
+      }
+    }
+    .project-info {
+      h5 {
+        font-family: $ca-S-bold;
+      }
+      p {
+        font-family: $ca-light;
+      }
+    }
+  }
+}

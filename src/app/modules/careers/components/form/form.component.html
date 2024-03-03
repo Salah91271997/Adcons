@@ -1,0 +1,514 @@
+<div class="career-form" setRtl>
+  <div class="adcons-container">
+    <div class="form-title form-title__1">
+      <h6>{{ "CAREERS.SUBMIT_YOUR_APP" | translate }}:</h6>
+    </div>
+    <form [formGroup]="careersForm">
+      <div class="row">
+        <div class="col-xl-5">
+          <div class="position-relative ipput-file">
+            <input-text
+              [formControlName]="'CV'"
+              [type]="'text'"
+              [placeholder]="'LABELS.PLACEHOLDER.APPLICATION'"
+              [blackLabel]="true"
+              [formControl]="formControlData('CV')"
+              [errorMessages]="errorMessages"
+              [none]="true"
+              [textHide]="true"
+              [disabled]="true"
+            ></input-text>
+            <input class="file" type="file" (input)="uploadImage($event)" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-9">
+          <div class="row">
+            <div class="col-xl-10">
+              <div class="row">
+                <div class="col-xl-4">
+                  <input-text
+                    [label]="'LABELS.FIRST_NAME'"
+                    [formControlName]="'first_name'"
+                    [type]="'text'"
+                    [blackLabel]="true"
+                    [formControl]="formControlData('first_name')"
+                    [errorMessages]="errorMessages"
+                    [required]="true"
+                  ></input-text>
+                </div>
+                <div class="col-xl-4">
+                  <input-text
+                    [label]="'LABELS.M_NAME'"
+                    [formControlName]="'middle_name'"
+                    [type]="'text'"
+                    [blackLabel]="true"
+                    [required]="true"
+                    [formControl]="formControlData('middle_name')"
+                    [errorMessages]="errorMessages"
+                  ></input-text>
+                </div>
+                <div class="col-xl-4">
+                  <input-text
+                    [label]="'LABELS.LAST_NAME'"
+                    [formControlName]="'last_name'"
+                    [type]="'text'"
+                    [blackLabel]="true"
+                    [formControl]="formControlData('last_name')"
+                    [errorMessages]="errorMessages"
+                    [required]="true"
+                  ></input-text>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-10">
+              <input-text
+                [label]="'LABELS.E_MAIL'"
+                [formControlName]="'email'"
+                [type]="'text'"
+                [blackLabel]="true"
+                [required]="true"
+                [formControl]="formControlData('email')"
+                [errorMessages]="errorMessages"
+              ></input-text>
+            </div>
+
+            <div class="col-xl-10">
+              <input-text
+                [label]="'LABELS.PHONE'"
+                [formControlName]="'phone'"
+                [type]="'text'"
+                [blackLabel]="true"
+                [required]="true"
+                [formControl]="formControlData('phone')"
+                [errorMessages]="errorMessages"
+              ></input-text>
+            </div>
+            <div class="col-xl-12" formArrayName="links">
+              <div class="row align-items-end">
+                <ng-container
+                  *ngFor="let controls of linksFormArray.controls; index as i"
+                >
+                  <div class="col-xl-10" [formGroupName]="i">
+                    <input-text
+                      [label]="'LABELS.SOCIAL'"
+                      [formControlName]="'link'"
+                      [type]="'text'"
+                      [blackLabel]="true"
+                      [formControl]="formControlDataGernal(i, 'link', 'links')"
+                      [errorMessages]="errorMessages"
+                      [span]="true"
+                      [placeholder]="'Hyperlink'"
+                    ></input-text>
+                  </div>
+                  <div class="col-xl-1" *ngIf="linksFormArray.length >= 2">
+                    <span class="plus" (click)="removeOne(i, 'links')">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="#0e3166"
+                        class="bi bi-trash3"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </ng-container>
+
+                <div class="col-xl-1" *ngIf="getLastLink()">
+                  <span class="plus" (click)="addNew('links', 'newLink')">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15.214"
+                      height="15.214"
+                      viewBox="0 0 15.214 15.214"
+                    >
+                      <path
+                        id="Icon_open-plus"
+                        data-name="Icon open-plus"
+                        d="M5.705,0V5.705H0v3.8H5.705v5.705h3.8V9.509h5.705v-3.8H9.509V0Z"
+                        fill="#0e3166"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="employer">
+        <div class="row">
+          <div class="col-xl-11">
+            <div class="employer-body">
+              <div class="form-title form-title__mar">
+                <h6>{{ "CAREERS.EMPLOYER.TITLE" | translate }}</h6>
+              </div>
+
+              <div formArrayName="experience">
+                <ng-container
+                  *ngFor="
+                    let controlItem of experienceFormArray.controls;
+                    index as i
+                  "
+                >
+                  <div class="row" [formGroupName]="i">
+                    <div class="col-xl-11">
+                      <div class="row">
+                        <div class="col-xl-9">
+                          <input-text
+                            [label]="'LABELS.EMPLOYER.DESIGNATION'"
+                            [formControlName]="'designation'"
+                            [type]="'text'"
+                            [blackLabel]="true"
+                            [formControl]="
+                              formControlDataGernal(
+                                i,
+                                'designation',
+                                'experience'
+                              )
+                            "
+                            [errorMessages]="errorMessages"
+                            [required]="true"
+                          ></input-text>
+                        </div>
+                        <div class="col-xl-9">
+                          <input-text
+                            [label]="'LABELS.EMPLOYER.BUSINESS_NAME'"
+                            [formControlName]="'company'"
+                            [type]="'text'"
+                            [blackLabel]="true"
+                            [formControl]="
+                              formControlDataGernal(i, 'company', 'experience')
+                            "
+                            [errorMessages]="errorMessages"
+                            [required]="true"
+                          ></input-text>
+                        </div>
+                        <div class="row align-items-center">
+                          <div class="col-xl-3">
+                            <input-text
+                              [label]="'LABELS.EMPLOYER.START'"
+                              [formControlName]="'start_date'"
+                              [type]="'date'"
+                              [blackLabel]="true"
+                              [required]="true"
+                              [formControl]="
+                                formControlDataGernal(
+                                  i,
+                                  'start_date',
+                                  'experience'
+                                )
+                              "
+                              [errorMessages]="errorMessages"
+                            ></input-text>
+                          </div>
+                          <div
+                            class="col-xl-3"
+                            *ngIf="!controlItem.get('is_current')?.value"
+                          >
+                            <input-text
+                              [label]="'LABELS.EMPLOYER.END'"
+                              [formControlName]="'end_date'"
+                              [type]="'date'"
+                              [blackLabel]="true"
+                              [required]="true"
+                              [formControl]="
+                                formControlDataGernal(
+                                  i,
+                                  'end_date',
+                                  'experience'
+                                )
+                              "
+                              [errorMessages]="errorMessages"
+                            ></input-text>
+                          </div>
+                          <div class="col-xl-4">
+                            <div
+                              class="checkbox-container d-flex align-items-center"
+                            >
+                              <input
+                                formControlName="is_current"
+                                class="form-check-input"
+                                type="checkbox"
+                                id="checkboxNoLabel"
+                                [value]="controlItem.get('is_current')?.value"
+                                (change)="
+                                  ifIsChecked(
+                                    controlItem.get('is_current')?.value,
+                                    i
+                                  )
+                                "
+                              />
+                              <p>
+                                {{ "LABELS.EMPLOYER.CURRENTLY" | translate }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-xl-9">
+                          <input-text
+                            [label]="'LABELS.EMPLOYER.SUMMERY'"
+                            [formControlName]="'summary'"
+                            [type]="'textarea'"
+                            [blackLabel]="true"
+                            [required]="true"
+                            [formControl]="
+                              formControlDataGernal(i, 'summary', 'experience')
+                            "
+                            [errorMessages]="errorMessages"
+                          ></input-text>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <ng-container
+                    *ngIf="!formLoading && experienceFormArray.length >= 1"
+                  >
+                    <div class="btn-container">
+                      <button
+                        class="gray-btn"
+                        (click)="removeOne(i, 'experience')"
+                      >
+                        {{
+                          "VALIDATION_MESSAGES.EMPLOYER.REMOVE_EMPLOYER"
+                            | translate
+                        }}
+                      </button>
+                    </div>
+                  </ng-container>
+                </ng-container>
+              </div>
+
+              <!-- ************************************************* -->
+
+              <div class="row">
+                <div class="col-xl-12">
+                  <ng-container *ngIf="careersForm.get('experience')?.valid">
+                    <div
+                      class="btn-container"
+                      *ngIf="!formLoading && experienceFormArray.length < 5"
+                    >
+                      <button
+                        class="gray-btn"
+                        (click)="addNew('experience', 'newEmployer')"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="8.071"
+                          height="8.071"
+                          viewBox="0 0 8.071 8.071"
+                        >
+                          <path
+                            id="Icon_open-plus"
+                            data-name="Icon open-plus"
+                            d="M3.027,0V3.027H0V5.045H3.027V8.071H5.045V5.045H8.071V3.027H5.045V0Z"
+                            fill="#fff"
+                          />
+                        </svg>
+                        {{ "CAREERS.EMPLOYER.ADD" | translate }}
+                      </button>
+                    </div>
+                  </ng-container>
+
+                  <div
+                    class="error-message"
+                    *ngIf="experienceFormArray.length === 5"
+                  >
+                    <p class="message">
+                      {{ "VALIDATION_MESSAGES.END_FO_LENGTH" | translate }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="education">
+          <div class="row">
+            <div class="col-xl-11">
+              <div class="education-body">
+                <div class="form-title form-title__mar">
+                  <h6>{{ "CAREERS.EDUCATION.TITLE" | translate }}</h6>
+                </div>
+                <div class="row">
+                  <div class="col-xl-10" formArrayName="education">
+                    <ng-container
+                      *ngFor="
+                        let changeInfoForm of eduFormArray.controls;
+                        index as i
+                      "
+                    >
+                      <div class="row" [formGroupName]="i">
+                        <div class="col-xl-6">
+                          <input-text
+                            [label]="'LABELS.EDUCATION.UNIVERSITY'"
+                            [formControlName]="'university'"
+                            [type]="'text'"
+                            [blackLabel]="true"
+                            [required]="true"
+                            [formControl]="
+                              formControlDataGernal(
+                                i,
+                                'university',
+                                'education'
+                              )
+                            "
+                            [errorMessages]="errorMessages"
+                          ></input-text>
+                        </div>
+                        <div class="col-xl-6">
+                          <input-text
+                            [label]="'LABELS.EDUCATION.GRADUATION'"
+                            [formControlName]="'graduation_year'"
+                            [type]="'text'"
+                            [blackLabel]="true"
+                            [required]="true"
+                            [formControl]="
+                              formControlDataGernal(
+                                i,
+                                'graduation_year',
+                                'education'
+                              )
+                            "
+                            [errorMessages]="errorMessages"
+                          ></input-text>
+                        </div>
+                        <div class="col-xl-6">
+                          <input-text
+                            [label]="'LABELS.EDUCATION.DEGREE'"
+                            [formControlName]="'education_degree'"
+                            [type]="'text'"
+                            [required]="true"
+                            [blackLabel]="true"
+                            [formControl]="
+                              formControlDataGernal(
+                                i,
+                                'education_degree',
+                                'education'
+                              )
+                            "
+                            [errorMessages]="errorMessages"
+                          ></input-text>
+                        </div>
+                        <div class="col-xl-6">
+                          <input-text
+                            [label]="'LABELS.EDUCATION.MAJOR'"
+                            [formControlName]="'major'"
+                            [type]="'text'"
+                            [required]="true"
+                            [blackLabel]="true"
+                            [formControl]="
+                              formControlDataGernal(i, 'major', 'education')
+                            "
+                            [errorMessages]="errorMessages"
+                          ></input-text>
+                        </div>
+                        <div class="col-xl-6">
+                          <input-text
+                            [label]="'LABELS.EDUCATION.POST_GRADUATE'"
+                            [formControlName]="'post_graduate'"
+                            [type]="'text'"
+                            [blackLabel]="true"
+                            [required]="true"
+                            [formControl]="
+                              formControlDataGernal(
+                                i,
+                                'post_graduate',
+                                'education'
+                              )
+                            "
+                            [errorMessages]="errorMessages"
+                          ></input-text>
+                        </div>
+                        <div class="col-xl-12">
+                          <ng-container
+                            *ngIf="!formLoading && eduFormArray.length >= 1"
+                          >
+                            <div class="btn-container">
+                              <button
+                                class="gray-btn"
+                                (click)="removeOne(i, 'education')"
+                              >
+                                {{
+                                  "VALIDATION_MESSAGES.EMPLOYER.REMOVE_EMPLOYER"
+                                    | translate
+                                }}
+                              </button>
+                            </div>
+                          </ng-container>
+                        </div>
+                      </div></ng-container
+                    >
+                  </div>
+                  <div
+                    class="col-xl-12"
+                    *ngIf="
+                      careersForm.get('education')?.valid &&
+                      eduFormArray.length < 5
+                    "
+                  >
+                    <div class="btn-container" *ngIf="!formLoading">
+                      <button
+                        class="gray-btn"
+                        (click)="addNew('education', 'newEdu')"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="8.071"
+                          height="8.071"
+                          viewBox="0 0 8.071 8.071"
+                        >
+                          <path
+                            id="Icon_open-plus"
+                            data-name="Icon open-plus"
+                            d="M3.027,0V3.027H0V5.045H3.027V8.071H5.045V5.045H8.071V3.027H5.045V0Z"
+                            fill="#fff"
+                          />
+                        </svg>
+                        {{ "CAREERS.EDUCATION.ADD" | translate }}
+                      </button>
+                    </div>
+                  </div>
+                  <div class="error-message" *ngIf="eduFormArray.length === 5">
+                    <p class="message">
+                      {{ "VALIDATION_MESSAGES.END_FO_LENGTH" | translate }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="btn-container btn-container__app" *ngIf="!formLoading">
+            <button (click)="sendCv()" class="blue-btn">
+              {{ "CAREERS.SUBMIT_APP" | translate }}
+              <div class="on-hover"></div>
+            </button>
+            <div class="error-message" *ngIf="errorMsg">
+              <span class="message">{{ errorMsg | translate }}</span>
+            </div>
+          </div>
+          <div class="spiner" *ngIf="formLoading">
+            <form-spinner></form-spinner>
+          </div>
+          <div class="notification-message-container">
+            <div class="notification-message">
+              <p>{{ message }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

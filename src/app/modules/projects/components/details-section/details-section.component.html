@@ -1,0 +1,56 @@
+<div class="project-details mt-5" setRtl *ngIf="item.product_details">
+  <div class="adcons-container">
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <div class="title">
+          <h2>{{ item.product_details.title }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 align-items-center">
+      <div class="col-md-4 col-12">
+        <div
+          Intersection
+          #animation
+          #intersection="intersection"
+          (isIntersecting)="isIntersecting($event, animation)"
+        >
+          <div
+            class="d-flex align-items-center justify-content-center w-100 mb-5"
+            #circle
+          >
+            <p-chart
+              type="doughnut"
+              [data]="scrolled && data"
+              [options]="chartOptions"
+              [responsive]="true"
+              class="w-50"
+            ></p-chart>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 col-12">
+        <div class="sub-title px-5 px-lg-0">
+          <p class="mt-3">
+            {{ item.product_details.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-xl-4"
+      #line
+      Intersection
+      #animation
+      #intersection="intersection"
+      (isIntersecting)="isIntersecting($event, animation)"
+    >
+      <p-chart
+        type="line"
+        [data]="scrolled && basicData"
+        [options]="basicOptions"
+        [responsive]="true"
+      ></p-chart>
+    </div>
+  </div>
+</div>

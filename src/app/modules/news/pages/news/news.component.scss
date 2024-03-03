@@ -1,0 +1,39 @@
+@import "../.././../../../assets/styles/base/colors";
+@import "../.././../../../assets/styles/base/typography";
+.news {
+  .card {
+    border: 0;
+    background-color: transparent;
+    .news-item {
+      height: 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .page {
+    .page-link {
+      background-color: $white100;
+      color: $blue;
+      cursor: pointer;
+      font-family: $regular;
+    }
+    .orange {
+      color: $orange;
+    }
+    .active {
+      background-color: $grey;
+      border: 0;
+    }
+    .blueLight {
+      color: rgba($blue, 50%);
+    }
+  }
+  // Ar Style Start From Here
+  &.rtl {
+    .page {
+      .page-link {
+        font-family: $ca-regular;
+      }
+    }
+  }
+}

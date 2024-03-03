@@ -1,0 +1,126 @@
+<div class="form-group" [class.phone]="type === 'phone'" setRtl>
+  <label
+    *ngIf="label"
+    [ngClass]="{ blackLabel: blackLabel }"
+    class="form-control-label"
+    [for]="formControlName"
+    >{{ label | translate
+    }}<span *ngIf="required" class="required">*</span>:</label
+  >
+  <span *ngIf="span">{{ "CAREERS.PROVIDE" | translate }}</span>
+  <input
+    *ngIf="type !== 'textarea'"
+    [id]="formControlName"
+    class="form-control"
+    [class.disabled]="disabled"
+    [(ngModel)]="value"
+    [ngClass]="{ gray: blackLabel, hide: textHide }"
+    [type]="type"
+    [placeholder]="placeholder | translate"
+    [disabled]="disabled"
+    (input)="detectValueChange($event.target)"
+    [min]="minimum"
+    [max]="maximum"
+    [class.has-error]="
+      (formControl.touched || formControl.dirty) && !formControl.valid
+    "
+  />
+  <textarea
+    *ngIf="type === 'textarea'"
+    class="form-control textarea"
+    [ngClass]="{ gray: blackLabel }"
+    [id]="formControlName"
+    [placeholder]="placeholder | translate"
+    (input)="detectValueChange($event.target)"
+    [disabled]="disabled"
+    [(ngModel)]="value"
+    [class.has-error]="
+      (formControl.touched || formControl.dirty) && !formControl.valid
+    "
+  ></textarea>
+
+  <div
+    class="error-message"
+    *ngIf="(formControl.touched || formControl.dirty) && !formControl.valid"
+  >
+    <span class="message" *ngIf="formControl.errors?.['required']">{{
+      errorMessages[formControlName]?.required | translate
+    }}</span>
+    <span class="message" *ngIf="formControl.errors?.['maxlength']">{{
+      errorMessages[formControlName]?.maxlength | translate
+    }}</span>
+    <span class="message" *ngIf="formControl.errors?.['minlength']">{{
+      errorMessages[formControlName]?.minlength | translate
+    }}</span>
+    <span class="message" *ngIf="formControl.errors?.['max']">{{
+      errorMessages[formControlName]?.max | translate
+    }}</span>
+    <span class="message" *ngIf="formControl.errors?.['min']">{{
+      errorMessages[formControlName]?.min | translate
+    }}</span>
+    <span class="message" *ngIf="formControl.errors?.['notAlphabet']">{{
+      errorMessages[formControlName]?.notAlphabet | translate
+    }}</span>
+    <span class="message" *ngIf="formControl.errors?.['notAlphabet']">{{
+      errorMessages[formControlName]?.notEnglish | translate
+    }}</span>
+    <span class="message" *ngIf="formControl.errors?.['notAlphabet']">{{
+      errorMessages[formControlName]?.notArabic | translate
+    }}</span>
+    <span class="message" *ngIf="formControl.errors?.['notEnAlphaNum']">{{
+      errorMessages[formControlName]?.notEnAlphaNum | translate
+    }}</span>
+    <span class="message" *ngIf="formControl.errors?.['notArAlphaNum']">{{
+      errorMessages[formControlName]?.notArAlphaNum | translate
+    }}</span>
+    <span class="message" *ngIf="formControl.errors?.['notAlphaNum']">{{
+      errorMessages[formControlName]?.notAlphaNum | translate
+    }}</span>
+    <span class="message" *ngIf="formControl.errors?.['notNumber']">{{
+      errorMessages[formControlName]?.notNumber | translate
+    }}</span>
+    <span class="message" *ngIf="formControl.errors?.['notEmail']">{{
+      errorMessages[formControlName]?.notEmail | translate
+    }}</span>
+    <span class="message" *ngIf="formControl.errors?.['notPhone']">{{
+      errorMessages[formControlName]?.notPhone | translate
+    }}</span>
+    <span class="message" *ngIf="formControl.errors?.['notURL']">
+      {{ errorMessages[formControlName]?.notURL | translate }}
+    </span>
+    <span class="message" *ngIf="formControl.errors?.['CVError']">
+      {{ errorMessages[formControlName]?.invalidEx | translate }}
+    </span>
+    <span
+      class="message"
+      *ngIf="formControl.errors?.['notNumber'] ||
+      (formControl.errors?.['minlength'] || formControl.errors?.['maxlength']) "
+    >
+      {{ errorMessages[formControlName]?.notNumberAndYear | translate }}
+    </span>
+  </div>
+
+  <div
+    class="error-message"
+    *ngIf="
+      (formControl.touched || formControl.dirty) && !formControl.parent?.valid
+    "
+  ></div>
+  <div class="attach-svg" role="button" [ngClass]="{ none: !none }">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="15"
+      viewBox="0 0 30 15"
+    >
+      <path
+        id="Icon_material-insert-link"
+        data-name="Icon material-insert-link"
+        d="M5.85,18a4.654,4.654,0,0,1,4.65-4.65h6V10.5h-6a7.5,7.5,0,0,0,0,15h6V22.65h-6A4.654,4.654,0,0,1,5.85,18ZM12,19.5H24v-3H12Zm13.5-9h-6v2.85h6a4.65,4.65,0,0,1,0,9.3h-6V25.5h6a7.5,7.5,0,0,0,0-15Z"
+        transform="translate(-3 -10.5)"
+        fill="#2d2d2d"
+        opacity="0.4"
+      />
+    </svg>
+  </div>
+</div>

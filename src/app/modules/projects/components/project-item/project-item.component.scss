@@ -1,0 +1,63 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/mixins";
+.project-item {
+  background-color: $grey;
+  position: relative;
+  .veiw {
+    position: absolute;
+    cursor: pointer;
+
+    .img-read {
+      transition: all 0.2s ease-in-out;
+      display: none;
+    }
+    p {
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  .project-name {
+      font-family: $medium;
+  }
+  .main-img {
+    width: 100%;
+    @include x-small-screen {
+      height: 25rem;
+    }
+    @include normal-screen {
+      height: 35rem;
+    }
+  }
+  .regular {
+    font-family: $regular;
+    color: $blue;
+  }
+  .sub-title-orange {
+    p {
+      color: $orange;
+    }
+  }
+
+  .cursor {
+    cursor: pointer;
+  }
+  &:hover {
+    .veiw {
+      .img-read {
+        transition: all 0.2s ease-in-out;
+        display: block;
+        width: 2rem;
+      }
+      p {
+        transition: all 0.2s ease-in-out;
+        font-size: 1.4rem;
+        color: $orange;
+      }
+    }
+  }
+  &.rtl {
+    .regular {
+      font-family: $ca-regular;
+    }
+  }
+}

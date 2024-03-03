@@ -1,0 +1,25 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+
+.contact-us {
+  padding: 3rem 0;
+  background-color: $grey;
+  h2 {
+    font-family: $regular;
+  }
+  img {
+    margin-bottom: 1rem;
+  }
+  .orange {
+    color: $orange;
+  }
+  .blue {
+    color: $blue;
+  }
+  // arabic style
+  &.rtl {
+    h2 {
+      font-family: $ca-regular;
+    }
+  }
+}

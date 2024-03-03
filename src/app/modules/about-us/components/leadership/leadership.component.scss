@@ -1,0 +1,66 @@
+@import "../../../../../assets/styles/base/variables";
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/mixins";
+@import "../../../../../assets/styles/base/typography";
+
+.leadership {
+  background-color: $blue;
+  padding: 3rem 0;
+
+  .leader-title {
+    margin-bottom: 3rem;
+    h2 {
+      color: $orange;
+      font-family: $medium;
+    }
+  }
+  .leader {
+    margin-bottom: 2rem;
+    h6 {
+      font-family: $medium;
+      color: $white100;
+      margin-top: 0.8rem;
+    }
+    small {
+      font-family: $light;
+      color: $orange;
+    }
+    .leader-image {
+      overflow: hidden;
+      position: relative;
+      transition: 0.6s;
+
+      img {
+        width: 100%;
+      }
+      &:hover {
+        img {
+          transform: scale(1.2);
+          transition: 0.6s;
+        }
+        .overlay {
+          background-color: rgb(0, 0, 0, 0.3);
+        }
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: 0.6s;
+      }
+    }
+  }
+
+  // arabic style
+  &.rtl {
+    h2,
+    p {
+      font-family: $ca-medium;
+    }
+    small {
+      font-family: $ca-light;
+    }
+  }
+}

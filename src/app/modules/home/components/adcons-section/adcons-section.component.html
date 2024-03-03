@@ -1,0 +1,36 @@
+<div class="adcons" setRtl>
+  <div class="adcons-container">
+    <div class="about-container">
+      <div class="patt">
+        <pattern
+          [patternNumber]="20"
+          [rowNumber]="10"
+          [opacity]="0.2"
+          [opacityHover]="0.4"
+        ></pattern>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-5 col-12 order-2 order-md-1">
+          <div>
+            <h2>{{ item.about_us_title }}</h2>
+          </div>
+          <div class="sub-title">
+            <p >
+              {{ item.about_us_content }}
+            </p>
+          </div>
+          <button class="blue-btn mb-5 mb-lg-0" routerLink="/about-us">
+            {{ item.about_us_btn }}
+            <div class="on-hover"></div>
+          </button>
+        </div>
+        <div class="col-md-6 col-12 order-1 order-md-2 img">
+          <img
+            [src]="imgUrl + item.about_us_photo"
+            class="main-image "
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

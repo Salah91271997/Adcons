@@ -1,0 +1,63 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/mixins";
+@import "../../../../../assets/styles/base/typography";
+.adcons {
+  .about-container {
+    padding: 0;
+    @include medium-screen {
+      padding: 3rem 0;
+    }
+  }
+  h2 {
+    font-family: $medium;
+    color: $orange;
+    padding-top: 1rem;
+    @include medium-screen {
+      padding-top: 0;
+    }
+  }
+  position: relative;
+  .patt {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 61%;
+    overflow: hidden;
+  }
+
+  .sub-title {
+    max-width: 100%;
+    @include large-screen {
+      max-width: 75%;
+    }
+    p {
+      white-space: pre-line;
+      margin: 1rem 0 2rem 0;
+    }
+  }
+
+  .main-image {
+    width: 100%;
+    object-fit: contain;
+    height: 24.5rem;
+  }
+  .img {
+    position: relative;
+    z-index: 55;
+  }
+  &.rtl {
+    .patt {
+      right: 61%;
+      left: auto;
+    }
+    h2 {
+      font-family: $ca-medium;
+    }
+    .sub-title {
+      p {
+        font-family: $ca-regular;
+      }
+    }
+  }
+}

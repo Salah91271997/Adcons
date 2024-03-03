@@ -1,0 +1,53 @@
+@import "../../../../../assets/styles/base/variables";
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/mixins";
+
+.build {
+  .patt {
+    overflow: hidden;
+    height: 15vh;
+    @include medium-screen {
+      height: 42vh;
+    }
+  }
+  .details {
+    padding: 2rem 0;
+    .titile {
+      margin-bottom: 1.5rem;
+      .main-title,
+      .sub-title {
+        font-family: $regular;
+      }
+      .main-title {
+        color: $blue;
+      }
+      .sub-title {
+        color: $orange;
+      }
+    }
+    .description {
+      margin-bottom: 2rem;
+      @include normal-screen {
+        width: 70%;
+      }
+      span {
+        color: $blue;
+        font-family: $light;
+
+      }
+    }
+  }
+
+  // arabic style
+  &.rtl {
+    .details {
+      .titile {
+        .main-title,
+        .sub-title {
+          font-family: $ca-regular;
+        }
+      }
+    }
+  }
+}

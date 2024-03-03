@@ -1,0 +1,9 @@
+<div class="navigate" setRtl>
+  <ng-container *ngFor="let link of linksName; let i = index">
+    <a
+      routerLink="{{ pathes[i] }}"
+      ngClass=" {{ i === linksName.length - 1 ? 'current' : 'prev' }}"
+      >{{ link | translate }}
+    </a>
+  </ng-container>
+</div>

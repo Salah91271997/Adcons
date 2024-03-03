@@ -1,0 +1,138 @@
+@import "app.scss";
+
+/* Some Resets */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none !important;
+}
+
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+/* HTML Styles Start Here */
+html {
+  font-size: 16px;
+  height: -webkit-fill-available;
+  @include x-small-screen {
+    font-size: 12px;
+  }
+
+  @include small-screen {
+    font-size: 13px;
+  }
+
+  @include medium-screen {
+    font-size: 14px;
+  }
+
+  @include normal-screen {
+    font-size: 15px;
+  }
+
+  @include large-screen {
+    font-size: 16px;
+  }
+
+  // @include xlarge-screen {
+  //   font-size: 16px;
+  // }
+}
+
+/* Body Styles Start Here */
+body {
+  min-width: 320px;
+  overflow: hidden;
+  line-height: 1.5;
+  background-color: $white100;
+  min-height: -webkit-fill-available;
+  min-height: 100vh;
+  /* Temp Page Title Styles */
+  .page-title {
+    margin: 3rem 0;
+    font-size: 1.25rem;
+  }
+  &.rtl {
+    direction: rtl;
+    text-align: right;
+  }
+}
+
+/* App Layout Container Styles Start Here */
+.adcons-container {
+  max-width: 91%;
+  margin: 0 auto;
+}
+/* App Main Layout Styles Start Here */
+.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  main {
+    max-width: 100%;
+    min-height: 100%;
+    margin-top: -1px;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    section {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto;
+      overflow: hidden;
+      position: relative;
+      .adcons-page {
+        min-width: 100%;
+        max-width: min-content;
+        flex: 1 0 auto;
+        min-height: calc(100vh - 5rem);
+        //padding: 6rem 1.25rem 2rem;
+      }
+    }
+  }
+}
+
+/* Scrollbar Styles Start Here */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background: $white;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: $blue;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($blue, 50%);
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}

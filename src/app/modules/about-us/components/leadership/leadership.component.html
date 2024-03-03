@@ -1,0 +1,24 @@
+<div class="leadership" setRtl>
+  <div class="adcons-container">
+    <div class="leader-title">
+      <h2>{{ leadershipTitle }}</h2>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-sm-4 col-lg-3" *ngFor="let leader of leadership">
+        <div class="leader">
+          <div class="leader-image">
+            <img [src]="imgUrl + leader.photo" alt="" />
+            <div class="overlay"></div>
+          </div>
+          <h6>
+            {{ leader.name }}
+          </h6>
+          <small>
+            {{ leader.role }}
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

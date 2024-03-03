@@ -1,0 +1,24 @@
+<div class="box-container" setRtl>
+  <div class="box">
+    <div class="svg">
+      <img [src]="imgUrl + serviceItem.icon" alt="" />
+    </div>
+    <h6>
+      {{ serviceItem.name }}
+    </h6>
+    <span>
+      {{ serviceItem.description | services }}
+    </span>
+    <div class="link" [routerLink]="serviceItem.id">
+      <small>{{ "Home.Read" | translate }}</small>
+      <img
+        src="../../../../../assets/imgs/services/Icon feather-arrow-up-right.svg"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <div class="box-image">
+    <img [src]="imgUrl + serviceItem.image" alt="" />
+  </div>
+</div>

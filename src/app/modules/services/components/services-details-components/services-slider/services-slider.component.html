@@ -1,0 +1,23 @@
+<section class="services-slider" setRtl>
+  <div class="adcons-container">
+    <h2>Explore More Services</h2>
+    <ng-container *ngIf="serviceData$ | async as serviceData">
+      <swiper class="mySwiper" [config]="Options">
+        <ng-template swiperSlide *ngFor="let service of serviceData">
+          <div class="image w-100">
+            <img [src]="imgUrl + service.image" alt="" />
+            <div class="svg">
+              <img
+                src="../../../../../../assets/imgs/services/service-details/Group 198.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="overlay" [routerLink]="'/services/' + service.id">
+            <h3 class="title">{{ service?.name }}</h3>
+          </div>
+        </ng-template>
+      </swiper>
+    </ng-container>
+  </div>
+</section>

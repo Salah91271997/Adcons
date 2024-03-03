@@ -1,0 +1,25 @@
+@import "../../../../../../assets/styles/base/colors";
+@import "../../../../../../assets/styles/base/typography";
+
+.overview {
+  padding: 3rem 0;
+  h2 {
+    color: $orange;
+    font-family: $semiBold;
+    margin-bottom: 1rem;
+  }
+  p {
+    color: $blue;
+    font-family: $light;
+    white-space: pre-line;
+  }
+  // arabic style
+  &.rtl {
+    h2 {
+      font-family: $ca-S-bold;
+    }
+    p {
+      font-family: $ca-light;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.form-group {
+  .attach-svg {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  .opacity {
+    color: transparent;
+    &:focus,
+    &:active {
+      color: transparent;
+    }
+  }
+  .hide {
+    color: transparent;
+  }
+  &.rtl {
+    .attach-svg {
+      right: auto;
+      left: 2rem;
+    }
+  }
+}
+
+.none {
+  display: none;
+}

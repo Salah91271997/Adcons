@@ -1,0 +1,15 @@
+<div class="services-details">
+  <ng-container *ngIf="serviceDetail$ | async as serviceDetail">
+    <explore
+      [description]="serviceDetail.description"
+      [title]="serviceDetail.name"
+    ></explore>
+    <header-section [item]="serviceDetail"></header-section>
+    <overview
+      [overviewDesc]="serviceDetail.overview_description"
+      [overviewTitle]="serviceDetail.overview_title"
+    ></overview>
+    <project [projects]="serviceDetail.service_products"></project>
+    <services-slider></services-slider>
+  </ng-container>
+</div>

@@ -1,0 +1,37 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/mixins";
+.contact-section {
+  background-color: $grey;
+  padding: 2rem 0;
+  .contact-info {
+    h2 {
+      font-family: $regular;
+      &:first-child {
+        color: $blue;
+      }
+      &:last-child {
+        margin: 1rem 0;
+        color: $orange;
+        @include medium-screen {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .logo {
+    img {
+      max-width: 50px;
+      max-height: 50px;
+      margin-top: 1rem;
+    }
+  }
+  //  Ar Style Start From Here
+  &.rtl {
+    .contact-info {
+      h2 {
+        font-family: $ca-regular;
+      }
+    }
+  }
+}

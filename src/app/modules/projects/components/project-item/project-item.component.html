@@ -1,0 +1,38 @@
+<div class="project-item" setRtl>
+  <div class="adcons-container m-lg-0 my-0 mx-auto">
+    <div class="row align-items-center h-100 py-5 py-lg-0">
+      <div class="col-lg-6">
+        <img [src]="imgUrl + item.image" class="main-img" />
+      </div>
+      <div class="col-lg-6">
+        <div class="px-5 py-3 py-lg-0">
+          <h5 class="project-name">{{ item.name }}</h5>
+          <div class="sub-title my-5">
+            <p>
+              {{ item.description | subText }}
+            </p>
+          </div>
+          <div
+            class="sub-title sub-title-orange d-flex align-items-start align-items-md-center justify-content-between flex-column flex-md-row"
+          >
+            <p>{{ item.year }}</p>
+            <p>{{ item.location.name }}</p>
+            <p>{{ item.sector.name }}</p>
+          </div>
+          <div class="my-5">
+            <a
+              class="veiw d-flex align-items-center"
+              routerLink="details/{{ item.id }}"
+            >
+              <img
+                src="../../../../../assets/imgs/Path 509.svg"
+                class="img-read"
+              />
+              <p class="regular cursor">{{ "Projects.veiw" | translate }}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

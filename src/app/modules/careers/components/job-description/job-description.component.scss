@@ -1,0 +1,16 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+.description {
+  margin: 4rem 0;
+  span {
+    color: $blue;
+    margin-inline-end: 6rem;
+    display: block;
+    font-family: $light;
+  }
+  &.rtl {
+    span {
+      font-family: $ca-light;
+    }
+  }
+}

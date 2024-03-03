@@ -1,0 +1,53 @@
+@import "../../../../../assets/styles/base/variables";
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/mixins";
+@import "../../../../../assets/styles/base/typography";
+
+.qoute {
+  margin: 5rem auto;
+  @include xCenter;
+  blockquote {
+    font-size: 1.438rem;
+    font-family: $semiBold;
+    color: $blue;
+    position: relative;
+    max-width: 85%;
+    text-align: center;
+
+    @include large-screen {
+      max-width: 62%;
+    }
+  }
+  blockquote::before,
+  blockquote::after {
+    color: $orange;
+    font-size: 2rem;
+    position: relative;
+  }
+  blockquote::before {
+    content: url("../../../../../assets/imgs/leadership/Icon\ metro-quote-open.svg");
+    margin-inline-end: 1rem;
+    top: -1rem;
+  }
+  blockquote::after {
+    content: url("../../../../../assets/imgs/leadership/Icon\ metro-quote.svg");
+    margin-inline-start: 1rem;
+    bottom: -1rem;
+  }
+  // arabic style
+  &.rtl {
+    blockquote {
+      font-family: $ca-S-bold;
+      &::after {
+        right: -2rem;
+      }
+    }
+    blockquote::before {
+      content: url("../../../../../assets/imgs/leadership/Icon\ metro-quote.svg");
+    }
+    blockquote::after {
+      content: url("../../../../../assets/imgs/leadership/Icon\ metro-quote-open.svg");
+      right: 0;
+    }
+  }
+}

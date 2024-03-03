@@ -1,0 +1,22 @@
+<ng-container *ngIf="contactUsData$ | async as contactUsData">
+  <div class="contact-us">
+    <div class="adcons-container">
+      <navigate
+        [linksName]="['MENU.HOME', 'MENU.CONTACT_US']"
+        [pathes]="['', '/contact-us']"
+      ></navigate>
+      <div class="row gap">
+        <div class="col-xl-5">
+          <div class="contact-info d-flex align-items-center">
+            <app-contact-us-content
+              [contactUs]="contactUsData"
+            ></app-contact-us-content>
+          </div>
+        </div>
+        <div class="col-xl-5">
+          <contact-us-form [contactUs]="contactUsData"></contact-us-form>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

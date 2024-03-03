@@ -1,0 +1,41 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+
+.career-details-header {
+  background-color: $grey;
+  padding: 3rem 0;
+  min-height: 20vh;
+  .info {
+    h4 {
+      color: $orange;
+      font-family: $medium;
+      padding-bottom: 1rem;
+    }
+    .head,
+    .body {
+      font-family: $regular;
+    }
+    .head {
+      color: $orange;
+    }
+    .body {
+      color: $blue;
+    }
+  }
+  // .btn-container {
+  //   display: flex;
+  //   justify-content: flex-end;
+  //   margin-inline-end: 6rem;
+  // }
+  &.rtl {
+    .info {
+      h4 {
+        font-family: $ca-medium;
+      }
+      .head,
+      .body {
+        font-family: $ca-regular;
+      }
+    }
+  }
+}

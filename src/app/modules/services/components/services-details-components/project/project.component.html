@@ -1,0 +1,39 @@
+<section class="projects" setRtl>
+  <div class="adcons-container">
+    <div class="row" *ngFor="let project of projects; let i = index">
+      <div class="col-md-6" [ngClass]="onPosition(i)">
+        <div
+          class="project-details"
+          [ngClass]="project.product_images.length > 1 ? 'right' : 'left'"
+        >
+          <div class="header">
+            <p>
+              {{ project.sector }}
+            </p>
+            <h5>
+              {{ project.name }}
+            </h5>
+          </div>
+          <div class="body">
+            <span>
+              {{ project.description }}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div
+          class="project-image"
+          [ngClass]="project.product_images.length > 1 ? 'img2' : 'img1'"
+        >
+          <img
+            *ngFor="let img of project.product_images; let index = index"
+            [src]="imgUrl + img.image"
+            [ngClass]="'image' + '-' + index"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

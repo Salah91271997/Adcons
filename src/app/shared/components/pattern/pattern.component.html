@@ -1,0 +1,19 @@
+<div #image>
+  <div class="pattern" *ngFor="let row of rows">
+    <div class="container-pattern">
+      <div
+        [ngClass]="'single-patern' + i"
+        *ngFor="let img of numbers; let i = index"
+        class="single-patern"
+      >
+        <img
+          src="../../../../../assets/imgs/services/Path 712.png"
+          *ngFor="let img of imgNumbers; let k = index"
+          [ngClass]="'single-img' + k"
+          class="single-img"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>

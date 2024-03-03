@@ -1,0 +1,52 @@
+<div
+  class="project-details-section mt-5"
+  style="
+    background-image: url(../../../../../assets/imgs/pexels-gotta-be-worth-it-1021203.jpg);
+  "
+  setRtl
+>
+  <div class="overlay"></div>
+  <div class="adcons-container">
+    <div class="row pt-5">
+      <div class="col-12">
+        <div class="swiper">
+          <h3 class="title-text my-4">
+            {{ "Projects.Explore" | translate }}
+          </h3>
+          <swiper
+            [spaceBetween]="20"
+            [config]="swiperConfig"
+            [autoplay]="{
+              delay: 3000,
+              disableOnInteraction: false
+            }"
+            [navigation]="true"
+            class="mySwiper"
+          >
+            <ng-template
+              data-hash="slide1"
+              swiperSlide
+              *ngFor="let item of item"
+            >
+              <div class="image-container">
+                <img
+                  [routerLink]="'/projects/details/' + item.id"
+                  [src]="imgUrl + item.image"
+                  alt=""
+                  class="img-swiper"
+                />
+              </div>
+              <h6 class="text">{{ item.name }}</h6>
+            </ng-template>
+          </swiper>
+          <div class="d-flex justify-content-center">
+            <button class="orange-btn my-4" routerLink="/projects">
+              {{ "Projects.AllP" | translate }}
+              <div class="on-hover"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

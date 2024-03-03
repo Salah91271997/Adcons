@@ -1,0 +1,24 @@
+<div class="careers" setRtl>
+  <ng-container *ngIf="careersContent$ | async as careersContent">
+    <div class="adcons-container">
+      <navigate [linksName]="['MENU.HOME', 'MENU.CAREER']"></navigate>
+      <careers-header
+        [title]="careersContent.career_page.name"
+        [description]="careersContent.career_page.description"
+      ></careers-header>
+      <div class="row">
+        <div
+          class="col-xl-4 col-md-6 card"
+          *ngFor="let career of careersContent.careers.results"
+        >
+          <career-item [careerItem]="career" class="career-item"></career-item>
+        </div>
+        <div class="text-center" *ngIf="careersContent.careers.next">
+          <a class="load-more" (click)="loadMore()">{{
+            "CAREERS.LOAD_MORE" | translate
+          }}</a>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

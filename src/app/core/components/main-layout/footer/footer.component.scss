@@ -1,0 +1,128 @@
+@import "../../../../../assets/styles/base/colors";
+@import "../../../../../assets/styles/base/typography";
+@import "../../../../../assets/styles/base/mixins";
+
+footer {
+  // background-color: $white;
+  background-color: $blue;
+  padding: 3rem 0;
+  a {
+    font-family: $light;
+    color: $white;
+    font-size: 0.875rem; //14px
+  }
+  .footer-body {
+    padding-top: 2rem;
+    .info {
+      @include x-small-screen {
+        max-width: 100%;
+        padding-bottom: 2rem;
+      }
+      @include large-screen {
+        max-width: 60%;
+        padding-bottom: 4rem;
+      }
+
+      small {
+        color: $white;
+        font-family: $regular;
+      }
+    }
+    .contact {
+      @include x-small-screen {
+        padding-bottom: 2rem;
+      }
+      @include large-screen {
+        padding-bottom: 0;
+      }
+      ul {
+        li {
+          padding-bottom: 0.5rem;
+          a {
+            svg {
+              margin-inline-end: 0.5rem;
+            }
+          }
+          span {
+            margin: 0 1rem;
+            color: $white100;
+          }
+        }
+      }
+    }
+    .col-title {
+      span {
+        color: $orange;
+        font-family: $regular;
+        padding-bottom: 1rem;
+        display: inline-block;
+      }
+    }
+    .links {
+      li {
+        a {
+          padding-bottom: 1rem;
+          display: inline-block;
+        }
+      }
+    }
+    .svg-container {
+      position: relative;
+      svg {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    }
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 0;
+      outline: 0;
+      background-color: $white;
+      &::placeholder {
+        font-family: $light;
+        opacity: 0.65;
+        color: $blue;
+        font-size: 0.813rem; // 13px
+      }
+    }
+    .social-med {
+      ul {
+        display: flex;
+        justify-content: center;
+        @include medium-screen {
+          justify-content: unset;
+        }
+        margin-top: 2rem !important;
+        li {
+          margin-inline-end: 2.5rem;
+        }
+      }
+    }
+  }
+  &.rtl {
+    a {
+      font-family: $ca-light;
+    }
+    small {
+      font-family: $ca-regular;
+    }
+    .col-title {
+      span {
+        font-family: $ca-regular;
+      }
+    }
+    .footer-body {
+      .svg-container {
+        svg {
+          right: auto;
+          left: 5%;
+          transform: rotate(180deg) translateY(50%);
+        }
+      }
+    }
+  }
+}
